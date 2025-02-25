@@ -3,7 +3,7 @@ setTimeout(function () {
 }, 2e3);
 var options = {
         chart: { height: 360, type: "bar", stacked: !0, toolbar: { show: !1 }, zoom: { enabled: !0 } },
-        plotOptions: { bar: { horizontal: !1, columnWidth: "25%", endingShape: "rounded"} },
+        plotOptions: { bar: { horizontal: !1, columnWidth: "25%", endingShape: "flat"} },
         dataLabels: { enabled: !1 },
         series: [
             { name: "تقرير 1", data: [44, 55, 41, 67, 22, 43, 36, 52, 24, 18, 36, 48] },
