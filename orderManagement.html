@@ -302,14 +302,8 @@
 
                     <div class="card shadow-none">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                        <h2 class="mb-sm-0 ">إحصائيات</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end page title -->
+
+
 
 
                             <div class="row">
@@ -393,103 +387,194 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <!-- App Search-->
-                                    <form class="app-search d-none d-lg-block ">
-                                        <div class="position-relative">
-                                            <input type="text" class="form-control" placeholder="بحث"
-                                                style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
-                                            <span class="bx bx-search-alt"></span>
-                                        </div>
-                                    </form>
-                                    <div class="d-flex gap-4 mb-3">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div
-                                                style="width: 12px; height: 12px; border-radius: 50%; background-color: #1adb01;">
-                                            </div>
-                                            <span>الفنيين المتاحين</span>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div
-                                                style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff0000;">
-                                            </div>
-                                            <span>الفنيين المشغولين</span>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div
-                                                style="width: 12px; height: 12px; border-radius: 50%; background-color: #2a4ba3;">
-                                            </div>
-                                            <span>المشرفين</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27644.346967036116!2d30.952652799999996!3d29.992550400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1740298099397!5m2!1sen!2seg"
-                                    width="1605" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">قائمة الطلبات</h4>
+
+
+
                             </div>
+                            <form class="app-search d-none d-lg-block ">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control" placeholder="بحث"
+                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                    <span class="bx bx-search-alt"></span>
+                                </div>
+                            </form>
                         </div>
                     </div>
+                    <!-- end page title -->
 
-                    <div class="card shadow-none mt-3">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between W-100">
-                                <div class="d-flex gap-4">
-                                    <div class="bg-light d-flex justify-content-center align-items-center"
-                                        style="border-radius: 50%; padding: 0 20px; height: 45px; width: 45px;background-color: #eff6fd;">
-                                        <i class="bx bx-bar-chart-alt-2 font-size-18" style="color: #346edb;"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="card-title">أداء الطلبات</h4>
-                                        <P>هنا يمكنك تتبع طلباتك بشكل يومي, اسبوعي, شهري و سنوي</P>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="dropdown d-inline-block">
-                                        <button type="button"
-                                            class="btn header-item noti-icon right-bar-toggle waves-effect bg-light d-flex justify-content-center align-items-center"
-                                            style="border-radius: 50%; padding: 0 20px; height: 45px; width: 45px;">
-                                            <i class="bx bx-cog " style="color: #356FDB;"></i>
-                                        </button>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+
+
+
+                                    <div class="table-rep-plugin">
+                                        <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                            <table id="tech-companies-1" class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>رقم الطلب</th>
+                                                        <th data-priority="1">اسم العميل</th>
+                                                        <th data-priority="3">عنوان العميل</th>
+                                                        <th data-priority="1">اسم الفنى</th>
+                                                        <th data-priority="3">تاريخ الطلب</th>
+                                                        <th data-priority="3">وقت الطلب</th>
+                                                        <th data-priority="6">الحالة</th>
+                                                        <th data-priority="6">السعر الاجمالى</th>
+                                                        <th data-priority="6">الاجراء</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>001</td>
+                                                        <td>أحمد علي</td>
+                                                        <td>الرياض، المملكة العربية السعودية</td>
+                                                        <td>محمد سعيد</td>
+                                                        <td>01-03-2025</td>
+                                                        <td>10:30 صباحاً</td>
+                                                        <td> مكتمل</td>
+                                                        <td>500 ريال سعودي</td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>002</td>
+                                                        <td>فاطمة الزهراء</td>
+                                                        <td>جدة، المملكة العربية السعودية</td>
+                                                        <td>حسن عبدالله</td>
+                                                        <td>28-02-2025</td>
+                                                        <td>02:00 ظهراً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>300 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>003</td>
+                                                        <td>سلمان محمد</td>
+                                                        <td>الدمام، المملكة العربية السعودية</td>
+                                                        <td>علي القحطاني</td>
+                                                        <td>27-02-2025</td>
+                                                        <td>08:45 مساءً</td>
+                                                        <td>غير مكتمل</td>
+                                                        <td>200 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>004</td>
+                                                        <td>مريم خالد</td>
+                                                        <td>الخبر، المملكة العربية السعودية</td>
+                                                        <td>سعيد الفهيد</td>
+                                                        <td>26-02-2025</td>
+                                                        <td>04:20 مساءً</td>
+                                                        <td> نشط</td>
+                                                        <td>150 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>005</td>
+                                                        <td>يوسف جمال</td>
+                                                        <td>مكة المكرمة، المملكة العربية السعودية</td>
+                                                        <td>خالد محمد</td>
+                                                        <td>02-03-2025</td>
+                                                        <td>09:00 صباحاً</td>
+                                                        <td> نشط</td>
+                                                        <td>650 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>006</td>
+                                                        <td>نورة عبد الله</td>
+                                                        <td>الرياض، المملكة العربية السعودية</td>
+                                                        <td>سامي الغامدي</td>
+                                                        <td>02-03-2025</td>
+                                                        <td>11:30 صباحاً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>450 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>007</td>
+                                                        <td>سارة مصطفى</td>
+                                                        <td>الدمام، المملكة العربية السعودية</td>
+                                                        <td>سلمان الحربي</td>
+                                                        <td>01-03-2025</td>
+                                                        <td>01:00 مساءً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>700 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>008</td>
+                                                        <td>خالد السليمان</td>
+                                                        <td>جدة، المملكة العربية السعودية</td>
+                                                        <td>عبد الله الزهراني</td>
+                                                        <td>28-02-2025</td>
+                                                        <td>05:00 مساءً</td>
+                                                        <td> غير مكتمل</td>
+                                                        <td>550 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>009</td>
+                                                        <td>خديجة جمال</td>
+                                                        <td>المدينة المنورة، المملكة العربية السعودية</td>
+                                                        <td>سعد العنزي</td>
+                                                        <td>27-02-2025</td>
+                                                        <td>07:30 مساءً</td>
+                                                        <td> مكتمل</td>
+                                                        <td>400 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+
+
+
+
+
+
+
+
+                                                </tbody>
+                                            </table>
+                                            <div class="">
+                                                <ul class="pagination justify-content-end pagination-rounded">
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link"><i
+                                                                class="mdi mdi-chevron-right"></i></a>
+                                                    </li>
+
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">3</a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a href="#" class="page-link">2</a>
+                                                    </li>
+
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">1</a>
+                                                    </li>
+
+                                                    <li class="page-item disabled">
+                                                        <a href="#" class="page-link"><i
+                                                                class="mdi mdi-chevron-left"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
                             </div>
-
-                            <div id="stacked-column-chart" class="apex-charts " dir="rtl"
-                                style="border-bottom: 1px solid rgb(233, 230, 230);"></div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-
-                                <div class="d-flex align-items-center  gap-4"
-                                    style="border: 1px solid rgb(240, 239, 239);padding: 15px 10px 0 10px; border-radius: 30px;height: 40px; cursor: pointer;">
-
-
-                                    <p>
-                                        <i class="bx bx-copy-alt font-size-18"></i>
-                                    </p>
-                                    <p>ظهر التقرير كاملاً</p>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-4 bg-light"
-                                    style="border-radius: 30px; padding: 15px 10px 0 10px; cursor: pointer;height: 40px;">
-
-                                    <p>1 يوم</p>
-                                    <p>1 أسبوع</p>
-                                    <p>1 شهر</p>
-                                    <p>1 سنة</p>
-                                    <p style="font-weight: 600; background-color: white; border-radius: 30px; "
-                                        class="px-3 py-2">الجميع</p>
-
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
                 </div>
             </div>
         </div>
@@ -521,11 +606,18 @@
 
 
     </div>
+    
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
+
+      <!-- Responsive Table js -->
+      <!-- <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
+
+      <!-- Init js -->
+      <script src="assets/js/pages/table-responsive.init.js"></script>
 
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
