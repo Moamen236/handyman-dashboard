@@ -12,7 +12,7 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/order-management-style.css">
 </head>
 
 <body>
@@ -321,7 +321,12 @@
                                                         <div class="media-body">
                                                             <p class="text-muted fw-medium">عدد الطلبات المكتمله</p>
                                                             <h4 class="mb-0">6,585</h4>
+
                                                         </div>
+                                                    </div>
+                                                    <div class="card-body">
+
+                                                        <div id="sparkline10"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -338,7 +343,39 @@
                                                         <div class="media-body">
                                                             <p class="text-muted fw-medium">عدد الطلبات النشطة</p>
                                                             <h4 class="mb-0">6,585</h4>
+
                                                         </div>
+                                                    </div>
+
+                                                    <div class="card-body">
+
+                                                        <div id="sparkline2"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card mini-stats-wid">
+                                                <div class="card-body">
+                                                    <div class="media d-flex gap-4">
+                                                        <div class="d-flex justify-content-center align-items-center"
+                                                            style="border-radius: 50%;height: 30px; width: 30px;background-color: #fff4ca;">
+                                                            <i class="bx bx-user font-size-18"
+                                                                style="color: #fd9422;"></i>
+
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text-muted fw-medium"> عدد الطلبات قيد التنفيذ
+                                                            </p>
+                                                            <h4 class="mb-0">6,585</h4>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="card-body">
+
+                                                        <div id="sparkline11"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -357,29 +394,14 @@
                                                             <h4 class="mb-0">6,585</h4>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="card mini-stats-wid">
-                                                <div class="card-body">
-                                                    <div class="media d-flex gap-4">
-                                                        <div class="d-flex justify-content-center align-items-center"
-                                                            style="border-radius: 50%;height: 30px; width: 30px;background-color: #fff4ca;">
-                                                            <i class="bx bx-user font-size-18"
-                                                                style="color: #fd9422;"></i>
+                                                    <div class="card-body">
 
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <p class="text-muted fw-medium">عدد الفنيين المتاحين</p>
-                                                            <h4 class="mb-0">6,585</h4>
-                                                        </div>
-
-
+                                                        <div id="sparkline12"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -392,18 +414,51 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">قائمة الطلبات</h4>
+                                <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الطلبات</h4>
+                                <div class="d-flex align-items-center gap-4">
+
+
+
+
+                                    <select id="service-filter">
+                                        <option value="">الخدمة</option>
+                                        <option value="محمد سعيد">محمد سعيد</option>
+                                        <option value="حسن عبدالله">حسن عبدالله</option>
+                                    </select>
+
+                                    <select id="status-filter">
+                                        <option value="">الحالة</option>
+                                        <option value="مكتمل">مكتمل</option>
+                                        <option value="غير مكتمل">غير مكتمل</option>
+                                        <option value="نشط">نشط</option>
+                                    </select>
+                                    <select id="price-filter">
+                                        <option value="">السعر</option>
+                                        <option value="200">200 أو أقل</option>
+                                        <option value="400">400 أو أقل</option>
+                                        <option value="600">600 أو أقل</option>
+                                    </select>
+
+                                </div>
 
 
 
                             </div>
-                            <form class="app-search d-none d-lg-block ">
-                                <div class="position-relative">
-                                    <input type="text" class="form-control" placeholder="بحث"
-                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
-                                    <span class="bx bx-search-alt"></span>
+                            <div class="d-flex justify-content-between align-items-center gap-4 w-100">
+                                <form class="app-search d-none d-lg-block " style="width: 90%">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="بحث"
+                                            style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                        <span class="bx bx-search-alt"></span>
+                                    </div>
+                                </form>
+                                <div style="width: 10%;">
+                                    <button
+                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223); font-size: 15px;padding: 7px;width: 100%;">
+                                        تصدير
+                                    </button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <!-- end page title -->
@@ -533,6 +588,107 @@
                                                         <td>400 ريال سعودي</td>
                                                         <td></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>010</td>
+                                                        <td>أحمد علي</td>
+                                                        <td>الرياض، المملكة العربية السعودية</td>
+                                                        <td>محمد سعيد</td>
+                                                        <td>01-03-2025</td>
+                                                        <td>10:30 صباحاً</td>
+                                                        <td> مكتمل</td>
+                                                        <td>500 ريال سعودي</td>
+                                                        <td>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>011</td>
+                                                        <td>فاطمة الزهراء</td>
+                                                        <td>جدة، المملكة العربية السعودية</td>
+                                                        <td>حسن عبدالله</td>
+                                                        <td>28-02-2025</td>
+                                                        <td>02:00 ظهراً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>300 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>012</td>
+                                                        <td>سلمان محمد</td>
+                                                        <td>الدمام، المملكة العربية السعودية</td>
+                                                        <td>علي القحطاني</td>
+                                                        <td>27-02-2025</td>
+                                                        <td>08:45 مساءً</td>
+                                                        <td>غير مكتمل</td>
+                                                        <td>200 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>013</td>
+                                                        <td>مريم خالد</td>
+                                                        <td>الخبر، المملكة العربية السعودية</td>
+                                                        <td>سعيد الفهيد</td>
+                                                        <td>26-02-2025</td>
+                                                        <td>04:20 مساءً</td>
+                                                        <td> نشط</td>
+                                                        <td>150 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>014</td>
+                                                        <td>يوسف جمال</td>
+                                                        <td>مكة المكرمة، المملكة العربية السعودية</td>
+                                                        <td>خالد محمد</td>
+                                                        <td>02-03-2025</td>
+                                                        <td>09:00 صباحاً</td>
+                                                        <td> نشط</td>
+                                                        <td>650 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>015</td>
+                                                        <td>نورة عبد الله</td>
+                                                        <td>الرياض، المملكة العربية السعودية</td>
+                                                        <td>سامي الغامدي</td>
+                                                        <td>02-03-2025</td>
+                                                        <td>11:30 صباحاً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>450 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>016</td>
+                                                        <td>سارة مصطفى</td>
+                                                        <td>الدمام، المملكة العربية السعودية</td>
+                                                        <td>سلمان الحربي</td>
+                                                        <td>01-03-2025</td>
+                                                        <td>01:00 مساءً</td>
+                                                        <td>مكتمل</td>
+                                                        <td>700 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>017</td>
+                                                        <td>خالد السليمان</td>
+                                                        <td>جدة، المملكة العربية السعودية</td>
+                                                        <td>عبد الله الزهراني</td>
+                                                        <td>28-02-2025</td>
+                                                        <td>05:00 مساءً</td>
+                                                        <td> غير مكتمل</td>
+                                                        <td>550 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>018</td>
+                                                        <td>خديجة جمال</td>
+                                                        <td>المدينة المنورة، المملكة العربية السعودية</td>
+                                                        <td>سعد العنزي</td>
+                                                        <td>27-02-2025</td>
+                                                        <td>07:30 مساءً</td>
+                                                        <td> مكتمل</td>
+                                                        <td>400 ريال سعودي</td>
+                                                        <td></td>
+                                                    </tr>
 
 
 
@@ -543,29 +699,35 @@
 
                                                 </tbody>
                                             </table>
-                                            <div class="">
-                                                <ul class="pagination justify-content-end pagination-rounded">
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link"><i
-                                                                class="mdi mdi-chevron-right"></i></a>
-                                                    </li>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="">
+                                                    <div>
+                                                        <p>عدد العرض فى الصفحة</p>
+                                                    </div>
+                                                  
+                                                </div>
+                                                <div>
+                                                    <ul class="pagination justify-content-end pagination-rounded">
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link"><i
+                                                                    class="mdi mdi-chevron-right"></i></a>
+                                                        </li>
 
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link">3</a>
-                                                    </li>
-                                                    <li class="page-item active">
-                                                        <a href="#" class="page-link">2</a>
-                                                    </li>
+                                                        <li class="page-item ">
+                                                            <a href="#" class="page-link">2</a>
+                                                        </li>
+                                                        <li class="page-item ">
+                                                            <a href="#" class="page-link">1</a>
+                                                        </li>
 
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link">1</a>
-                                                    </li>
 
-                                                    <li class="page-item disabled">
-                                                        <a href="#" class="page-link"><i
-                                                                class="mdi mdi-chevron-left"></i></a>
-                                                    </li>
-                                                </ul>
+
+                                                        <li class="page-item disabled">
+                                                            <a href="#" class="page-link"><i
+                                                                    class="mdi mdi-chevron-left"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -585,20 +747,7 @@
 
 
 
-    <!-- <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer> -->
+
     </div>
     <!-- end main content-->
 
@@ -606,21 +755,25 @@
 
 
     </div>
-    
+
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
 
-      <!-- Responsive Table js -->
-      <!-- <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
+    <!-- Responsive Table js -->
+    <!-- <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
 
-      <!-- Init js -->
-      <script src="assets/js/pages/table-responsive.init.js"></script>
+    <!-- Init js -->
+    <script src="assets/js/pages/table-responsive.init.js"></script>
 
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <script src="assets/js/pages/sparklines.init.js"></script>
 
     <script src="assets/js/pages/dashboard.init.js"></script>
 
