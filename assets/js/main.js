@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     document.addEventListener("DOMContentLoaded", function () {
-        let rowsPerPage = 8;
+        let rowsPerPage = 10;
         let table = document.getElementById("tech-companies-1");
         let tbody = table.querySelector("tbody");
         let rows = tbody.querySelectorAll("tr");
@@ -90,7 +90,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    
+    document.addEventListener("DOMContentLoaded", function () {
+        const rowsPerPageSelect = document.getElementById("rowsPerPage");
+        const table = document.getElementById("tech-companies-1");
+        const tbody = table.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        
+        function updateTable() {
+            let rowsPerPage = parseInt(rowsPerPageSelect.value, 10);
+            
+            rows.forEach((row, index) => {
+                if (index < rowsPerPage) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+        
+        rowsPerPageSelect.addEventListener("change", updateTable);
+        
+        // Initial load
+        updateTable();
+    });
 
 
 
