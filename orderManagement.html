@@ -520,34 +520,35 @@
                                                                         <div
                                                                             class="modal-body d-flex gap-4 align-items-center">
                                                                             <div
-                                                                                class=" form-1 d-flex align-items-center justify-content-center gap-3">
+                                                                                class="form-box form-1 "
+                                                                                >
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check1">
-                                                                                <button class="btn">مكتمل</button>
+                                                                                <button class="btn" style="color: #47ad6c;">مكتمل</button>
 
                                                                             </div>
                                                                             <div
-                                                                                class="form-2 d-flex align-items-center justify-content-center gap-3">
+                                                                                class="form-box form-2 ">
 
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check2">
-                                                                                <button class="btn "> قيد التنفيذ
+                                                                                <button class="btn " style="color: #0079ff;"> قيد التنفيذ
                                                                                 </button>
 
                                                                             </div>
                                                                             <div
-                                                                                class="form-3 d-flex align-items-center justify-content-center gap-3">
+                                                                                class="form-box form-3 ">
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check3">
-                                                                                <button class="btn ">نشط
+                                                                                <button class="btn " style="color: #fd9422;">نشط
                                                                                 </button>
 
                                                                             </div>
                                                                             <div
-                                                                                class="form-4 d-flex align-items-center justify-content-center gap-3">
+                                                                                class="form-box form-4 ">
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check4">
-                                                                                <button class="btn ">ملغى
+                                                                                <button class="btn " style="color: #db2626;">ملغى
                                                                                 </button>
 
                                                                             </div>
@@ -578,7 +579,7 @@
                                                                                     <input type="text"
                                                                                         class="form-control"
                                                                                         placeholder="بحث"
-                                                                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                                                                        style="background-color: white; border-radius: 5px; border: 1px solid rgb(224, 223, 223);">
                                                                                     <span
                                                                                         class="bx bx-search-alt"></span>
                                                                                 </div>
@@ -587,12 +588,21 @@
                                                                             <!-- Select Dropdown -->
                                                                             <div class="mt-1">
                                                                                
-                                                                                <select class="form-select" id="dataSelect" dir="rtl">
-                                                                                    <option value="" selected disabled>اختيار فنى</option>
-                                                                                    <option value="data1">محمد</option>
-                                                                                    <option value="data2">احمد</option>
-                                                                                    <option value="data3">على</option>
-                                                                                </select>
+                                                                                <div class="position-relative d-flex align-items-center">
+                                                                                    <!-- Material Design Icon (Right Side) -->
+                                                                                    
+                                                                                
+                                                                                    <!-- Select Box (Centered Text & Arrow on Left) -->
+                                                                                    <select class="form-select text-center pe-4 ps-5" id="dataSelect" dir="rtl">
+                                                                                        <option value="" selected disabled>اختيار فنى</option>
+                                                                                        <option value="data1">محمد</option>
+                                                                                        <option value="data2">احمد</option>
+                                                                                        <option value="data3">على</option>
+                                                                                    </select>
+
+                                                                                    <i class="mdi mdi-account position-absolute start-0" style="color: #0079ff; font-size: 24px;"></i>
+                                                                                </div>
+                                                                                
                                                                                 
                                                                             </div>
                                                                         </div>

@@ -11,35 +11,43 @@
    
 }
 
-#dataSelect ,
-.form-2{
+#dataSelect {
     border-radius: 5px;
-
+   padding-right: 5px;
     background-color: #e8f6ff;
     color: #0079ff;
     border: transparent;
 }
-/* .form-1 {
-    border-radius: 5px;
-    padding: 0 5px;
-    background-color: #e8f6ff;
-    color: #47ad6c !important;
-    border: transparent;
-} */
 
-
-/* .form-3 {
+.form-box {
     border-radius: 5px;
-    padding: 0 5px;
-    background-color: #e8f6ff;
-    color: #fd9422;
+    padding-right: 5px;
     border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
 }
+
+
+.form-1 {
+    background-color: #bae2c3; 
+    color: #47ad6c; 
+}
+
+.form-2 {
+    background-color: #e8f6ff; 
+    color: #0079ff; 
+}
+
+.form-3 {
+    background-color: #f2e3b1; 
+    color:  #fd9422; 
+}
+
 .form-4 {
-    border-radius: 5px;
-    padding: 0 5px;
-    background-color: #e8f6ff;
+    background-color: #f8d7da; 
     color: #db2626;
-    border: transparent;
-} */
+}
+
 
