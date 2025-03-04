@@ -1,7 +1,7 @@
 #price-filter,
 #service-filter,
 #status-filter,
-#date-filter {
+#date-filter{
     border-radius: 5px;
     height: 32px;
     width: 120px;
@@ -10,4 +10,36 @@
     border: transparent;
    
 }
+
+#dataSelect ,
+.form-2{
+    border-radius: 5px;
+
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+}
+/* .form-1 {
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #e8f6ff;
+    color: #47ad6c !important;
+    border: transparent;
+} */
+
+
+/* .form-3 {
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #e8f6ff;
+    color: #fd9422;
+    border: transparent;
+}
+.form-4 {
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #e8f6ff;
+    color: #db2626;
+    border: transparent;
+} */
 
