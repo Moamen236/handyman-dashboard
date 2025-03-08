@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tech-management-style.css">
+</head>
+
+<body>
+
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo d-flex align-items-center justify-content-center gap-4">
+
+                            <span class="logo-lg ">
+                                <img src="assets/images/brands/Simplification.png" alt="" height="32" class="mb-2">
+
+                            </span>
+                            <div>
+                                <h3>لوحة التحكم</h3>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                </div>
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block flex-grow-1">
+                    <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="بحث"
+                            style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                        <span class="bx bx-search-alt"></span>
+                    </div>
+                </form>
+
+                <div class="d-flex">
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                            aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..."
+                                            aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i
+                                                    class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="bx bx-bell bx-tada"></i>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg  p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> اشعارات </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> عرض الكل</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="#" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1" key="t-your-order">الفنى قادم اليك</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">يمكنك التواصل معه </p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                        key="t-min-ago">من 3 دقائق</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">يوجد فنيين فى تخصصات جديدة</h6>
+                                            <div class="font-size-12 text-muted">
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                        key="t-hours-ago">من 1 ساعة</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">يوجد فنيين فى تخصصات جديدة</h6>
+                                            <div class="font-size-12 text-muted">
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span
+                                                        key="t-hours-ago">من 1 ساعة</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">
+                                        عرض الكل</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block "></i>
+                            <img class="rounded-circle header-profile-user " src="assets/images/users/avatar-1.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1" key="t-henry"></span>
+
+                        </button>
+                        <div class="dropdown-menu ">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i>
+                                <span key="t-profile">ملف شخصى</span></a>
+
+
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#"><i
+                                    class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span
+                                    key="t-logout"> تسجيل الخروج</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+
+                <div id="sidebar-menu" class="h-100">
+
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="/handyman-dashboard/index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i>
+                                <span key="t-dashboards">الصفحه الرئيسية</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/handyman-dashboard/orderManagement.html" class="waves-effect">
+                                <i class="bx bx-file"></i>
+                                <span key="t-layouts">إدارة الطلبات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/handyman-dashboard/techManagement.html" class="waves-effect">
+                                <i class="bx bx-user"></i>
+                                <span key="t-layouts">إدارة الفنيين</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-group"></i>
+                                <span key="t-layouts">إدارة العملاء </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-map"></i>
+                                <span key="t-layouts">نظام التتبع المباشر </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span key="t-layouts"> نظام الدردشة الفورية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-wallet"></i>
+                                <span key="t-layouts"> إدارة المدفوعات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-cog"></i>
+                                <span key="t-layouts"> الإعدادات العامة</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-bar-chart"></i>
+                                <span key="t-layouts"> التقارير والتحليلات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-check-shield"></i>
+                                <span key="t-layouts"> نظام المراجعة الذكي</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-support"></i>
+                                <span key="t-layouts"> مركز الدعم الفني</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-analyse"></i>
+                                <span key="t-layouts"> الذكاء الاصطناعي لتحليل البيانات</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-trophy"></i>
+                                <span key="t-layouts"> نظام تحفيز الفنيين</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="metismenu list-unstyled mt-6">
+                        <li>
+                            <a href="javascript: void(0);" class=" waves-effect">
+                                <i class="bx bx-log-out fw-bolder"></i>
+                                <span key="t-layouts fw-bolder"> تسجيل الخروج</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content" style="background-color: white;">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الفنيين</h4>
+                                <div class="d-flex align-items-center gap-4">
+
+
+                                    <select id="department-filter">
+                                        <option value="">التخصص</option>
+                                        <option value=" سباكة"> سباكة</option>
+                                        <option value=" حدادة"> حدادة</option>
+                                    </select>
+
+                                    <select id="status-tech-filter">
+                                        <option value="">الحالة</option>
+                                        <option value="مكتمل">مكتمل</option>
+                                        <option value="غير مكتمل">غير مكتمل</option>
+                                        <option value="نشط">نشط</option>
+                                    </select>
+                                    <select id="rate-filter">
+
+                                        <option value="">التقييم</option>
+                                        <option value="200">4 أو أقل</option>
+                                        <option value="400">6 أو أقل</option>
+                                        <option value="600">8 أو أقل</option>
+                                    </select>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center gap-4 w-100">
+                                <form class="app-search d-none d-lg-block " style="width: 90%">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="بحث"
+                                            style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                        <span class="bx bx-search-alt"></span>
+                                    </div>
+                                </form>
+                                <div style="width: 10%;">
+                                    <button
+                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223); font-size: 15px;padding: 7px;width: 100%;">
+                                        <i class="mdi mdi-download"></i>
+                                        تصدير
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+
+
+
+                                    <div class="table-rep-plugin">
+                                        <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                            <table id="tech-companies-1" class="table table-striped">
+                                                <thead>
+                                                    <tr>
+
+                                                        <th data-priority="1"> كود الفنى</th>
+                                                        <th data-priority="3"> اسم الفنى</th>
+                                                        <th data-priority="1"> التخصص</th>
+                                                        <th data-priority="3"> عدد الطلبات المكتملة</th>
+                                                        <th data-priority="3"> الحالة</th>
+                                                        <th data-priority="6">التقييم العام</th>
+
+                                                        <th data-priority="6">الاجراء</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1001</td>
+
+                                                        <td>أحمد علي</td>
+                                                        <td>سباكة</td>
+                                                        <td>25</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                </div>
+
+                                                                4.8
+                                                            </div>
+                                                        </td>
+
+
+                                                        <td>
+                                                            <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button>
+
+
+                                                            <!-- sample modal content -->
+                                                            <div id="myModal" class="modal fade" tabindex="-1"
+                                                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-lg">
+                                                                    <div class="modal-content">
+                                                                        <button type="button" class="btn-close m-2 p-2"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
+
+
+
+
+                                                                        <div class="col-lg-12">
+                                                                            <div class="row px-4">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="card mini-stats-wid">
+                                                                                        <div class="card-body">
+                                                                                            <div
+                                                                                                class="media d-flex gap-2">
+                                                                                                <div class="d-flex justify-content-center align-items-center"
+                                                                                                    style="border-radius: 50%;height: 30px; width: 30px;background-color: #e8f6ff;">
+                                                                                                    <i class="mdi mdi-clock-outline font-size-18"
+                                                                                                        style="color: #0079ff;"></i>
+                                                                                                </div>
+                                                                                                <div class="media-body">
+                                                                                                    <p
+                                                                                                        class="text-muted fw-medium">
+                                                                                                        متوسط وقت
+                                                                                                        الاستجابة</p>
+                                                                                                    <h4 class="mb-0">
+                                                                                                        23.8</h4>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="card mini-stats-wid">
+                                                                                        <div class="card-body">
+                                                                                            <div
+                                                                                                class="media d-flex gap-2">
+                                                                                                <div class="d-flex justify-content-center align-items-center"
+                                                                                                    style="border-radius: 50%;height: 30px; width: 30px;background-color: #e8f6ff;">
+                                                                                                    <i class="mdi mdi-account-alert-outline font-size-18"
+                                                                                                        style="color: #0079ff;"></i>
+                                                                                                </div>
+                                                                                                <div class="media-body">
+                                                                                                    <p
+                                                                                                        class="text-muted fw-medium">
+                                                                                                        عدد الشكاوى</p>
+                                                                                                    <h4 class="mb-0">10
+                                                                                                    </h4>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+
+                                                                        <h6 class="px-3"> بيانات الفنى</h6>
+                                                                        <div class="px-4 py-1">
+                                                                            <div>
+                                                                                <div class="my-4">
+                                                                                    <label for="nameInput"
+                                                                                        class="form-label">
+                                                                                        الاسم</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="nameInput">
+                                                                                </div>
+
+                                                                                <div class="my-4">
+                                                                                    <label for="emailInput"
+                                                                                        class="form-label">البريد
+                                                                                        الالكترونى</label>
+                                                                                    <input type="email"
+                                                                                        class="form-control"
+                                                                                        id="emailInput">
+                                                                                </div>
+
+                                                                                <div class="my-4">
+                                                                                    <label for="phoneInput"
+                                                                                        class="form-label"> رقم
+                                                                                        الجوال</label>
+                                                                                    <input type="tel"
+                                                                                        class="form-control"
+                                                                                        id="phoneInput">
+                                                                                </div>
+
+                                                                                <div class="my-4">
+                                                                                    <label for="addressInput"
+                                                                                        class="form-label"> الموقع
+                                                                                        الحالى</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="addressInput">
+                                                                                </div>
+                                                                            </div>
+
+
+
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1002</td>
+
+                                                        <td>محمد حسن</td>
+                                                        <td>كهرباء</td>
+                                                        <td>30</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex ">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                </div>
+                                                                5
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1003</td>
+
+                                                        <td>خالد محمود</td>
+                                                        <td>نجارة</td>
+                                                        <td>20</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1004</td>
+
+                                                        <td>سامي يوسف</td>
+                                                        <td>تكييف</td>
+                                                        <td>15</td>
+                                                        <td>غير نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1005</td>
+
+                                                        <td>محمود عمر</td>
+                                                        <td>دهانات</td>
+                                                        <td>18</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+
+                                                                </div>
+                                                                3
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1006</td>
+
+                                                        <td>علي فتحي</td>
+                                                        <td>سباكة</td>
+                                                        <td>22</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1007</td>
+
+                                                        <td>ياسر نصر</td>
+                                                        <td>كهرباء</td>
+                                                        <td>27</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1008</td>
+
+                                                        <td>زياد سامي</td>
+                                                        <td>تكييف</td>
+                                                        <td>13</td>
+                                                        <td>غير نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1009</td>
+
+                                                        <td>حسين عبد الله</td>
+                                                        <td>نجارة</td>
+                                                        <td>19</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1010</td>
+
+                                                        <td>إيهاب يوسف</td>
+                                                        <td>دهانات</td>
+                                                        <td>23</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1011</td>
+
+                                                        <td>كريم محمود</td>
+                                                        <td>سباكة</td>
+                                                        <td>21</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1012</td>
+
+                                                        <td>نادر صلاح</td>
+                                                        <td>كهرباء</td>
+                                                        <td>29</td>
+                                                        <td>نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                4
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1013</td>
+
+                                                        <td>عمر سعيد</td>
+                                                        <td>تكييف</td>
+                                                        <td>16</td>
+                                                        <td>غير نشط</td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div class="d-flex align-items-center "
+                                                                    style="color: #FFC31B;">
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+                                                                    <i class="mdi mdi-star"></i>
+
+
+                                                                </div>
+                                                                5
+
+                                                            </div>
+
+                                                        </td>
+                                                        <td> <button type="button" class="btn  waves-effect waves-light"
+                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                style="border: none;">
+                                                                <i class="mdi mdi-dots-horizontal"></i>
+                                                            </button></td>
+                                                    </tr>
+
+
+
+
+
+
+
+                                                </tbody>
+                                            </table>
+                                            <div class=" d-flex justify-content-between align-items-center">
+                                                <div class="d-flex gap-2 align-items-center">
+
+                                                    <p class="w-75 mt-2">عدد العرض فى الصفحة</p>
+
+                                                    <select id="rowsPerPage" class="mb-2 w-25"
+                                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);padding: 5px;">
+
+                                                        <option value="10">10</option>
+                                                        <option value="15">15</option>
+                                                        <option value="75">75</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+
+                                                </div>
+                                                <div>
+                                                    <ul class="pagination justify-content-end pagination-rounded">
+                                                        <li class="page-item">
+                                                            <a href="#" class="page-link"><i
+                                                                    class="mdi mdi-chevron-right"></i></a>
+                                                        </li>
+
+                                                        <li class="page-item ">
+                                                            <a href="#" class="page-link">2</a>
+                                                        </li>
+                                                        <li class="page-item ">
+                                                            <a href="#" class="page-link">1</a>
+                                                        </li>
+
+
+
+                                                        <li class="page-item disabled">
+                                                            <a href="#" class="page-link"><i
+                                                                    class="mdi mdi-chevron-left"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+
+
+    </div>
+    <!-- end main content-->
+
+
+
+
+    </div>
+
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Responsive Table js -->
+    <!-- <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
+
+    <!-- Init js -->
+    <script src="assets/js/pages/table-responsive.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <script src="assets/js/pages/sparklines.init.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

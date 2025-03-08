@@ -1,0 +1,11 @@
+#department-filter,
+#rate-filter,
+#status-tech-filter {
+    border-radius: 5px;
+    height: 32px;
+    width: 120px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+   
+}
