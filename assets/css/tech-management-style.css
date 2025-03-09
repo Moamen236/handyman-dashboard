@@ -9,3 +9,41 @@
     border: transparent;
    
 }
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    border-radius: 15px;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.toggle-switch.active {
+    background-color: #4ac34e;
+}
+
+.toggle-switch.active::before {
+    transform: translateX(30px);
+}

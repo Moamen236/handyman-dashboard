@@ -115,7 +115,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    const toggleButton = document.getElementById('toggleButton');
+    const toggleText = document.getElementById('toggleText');
 
+    toggleButton.addEventListener('click', () => {
+        toggleButton.classList.toggle('active');
+        toggleText.textContent = toggleButton.classList.contains('active') ? 'ON' : 'OFF';
+    });
 
 
 
