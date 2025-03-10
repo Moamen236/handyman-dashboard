@@ -278,7 +278,7 @@
                     </ul>
                     <ul class="metismenu list-unstyled mt-6">
                         <li>
-                            <a href="javascript: void(0);" class=" waves-effect">
+                            <a  href="/handyman-dashboard/login.html" class=" waves-effect">
                                 <i class="bx bx-log-out fw-bolder"></i>
                                 <span key="t-layouts fw-bolder"> تسجيل الخروج</span>
                             </a>
@@ -520,104 +520,223 @@
                                                                         </div>
                                                                         <div
                                                                             class="modal-body d-flex gap-4 align-items-center">
-                                                                            <div
-                                                                                class="form-box form-1 "
-                                                                                >
+                                                                            <div class="form-box form-1 ">
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check1">
-                                                                                <button class="btn" style="color: #47ad6c;">مكتمل</button>
+                                                                                <button class="btn"
+                                                                                    style="color: #47ad6c;">مكتمل</button>
 
                                                                             </div>
-                                                                            <div
-                                                                                class="form-box form-2 ">
+                                                                            <div class="form-box form-2 ">
 
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check2">
-                                                                                <button class="btn " style="color: #0079ff;"> قيد التنفيذ
+                                                                                <button class="btn "
+                                                                                    style="color: #0079ff;"> قيد التنفيذ
                                                                                 </button>
 
                                                                             </div>
-                                                                            <div
-                                                                                class="form-box form-3 ">
+                                                                            <div class="form-box form-3 ">
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check3">
-                                                                                <button class="btn " style="color: #fd9422;">نشط
+                                                                                <button class="btn "
+                                                                                    style="color: #fd9422;">نشط
                                                                                 </button>
 
                                                                             </div>
-                                                                            <div
-                                                                                class="form-box form-4 ">
+                                                                            <div class="form-box form-4 ">
                                                                                 <input class="form-check-input"
                                                                                     type="checkbox" id="check4">
-                                                                                <button class="btn " style="color: #db2626;">ملغى
+                                                                                <button class="btn "
+                                                                                    style="color: #db2626;">ملغى
                                                                                 </button>
 
                                                                             </div>
 
                                                                         </div>
-                                                                        <h6 class="px-3">جدول الطلب</h6>
-                                                                        <div class="px-4 py-1">
-                                                                           <div class="d-flex justify-content-between align-items-center gap-3">
-                                                                            <div class="w-50">
-                                                                                <label for="dateInput"
-                                                                                    class="form-label">التاريخ</label>
-                                                                                <input type="date" class="form-control"
-                                                                                    id="dateInput">
-                                                                            </div>
 
-                                                                            <div class="w-50">
-                                                                                <label for="timeInput"
-                                                                                    class="form-label">الوقت</label>
-                                                                                <input type="time" class="form-control"
-                                                                                    id="timeInput">
-                                                                            </div>
-                                                                           </div>
-                                                        
-                                                                            <h6 class="px-3 mt-4"> تعيين فنى</h6>
-                                                                            <form
-                                                                                class="app-search d-none d-lg-block flex-grow-1">
-                                                                                <div class="position-relative">
+                                                                        <h6 class="px-4"> بيانات العميل</h6>
+                                                                        <div class="px-4 py-1">
+                                                                            <div>
+                                                                                <div class="my-4">
+                                                                                    <label for="nameInput"
+                                                                                        class="form-label">
+                                                                                        الاسم</label>
                                                                                     <input type="text"
                                                                                         class="form-control"
-                                                                                        placeholder="بحث"
-                                                                                        style="background-color: white; border-radius: 5px; border: 1px solid rgb(224, 223, 223);">
-                                                                                    <span
-                                                                                        class="bx bx-search-alt"></span>
+                                                                                        id="nameInput">
                                                                                 </div>
-                                                                            </form>
 
-                                                                            <!-- Select Dropdown -->
-                                                                            <div class="mt-1">
-                                                                               
-                                                                                <div class="position-relative d-flex align-items-center">
-                                                                                    <!-- Material Design Icon (Right Side) -->
-                                                                                    
-                                                                                
-                                                                                    <!-- Select Box (Centered Text & Arrow on Left) -->
-                                                                                    <select class="form-select text-center pe-4 ps-5" id="dataSelect" dir="rtl">
-                                                                                        <option value="" selected disabled>اختيار فنى</option>
-                                                                                        <option value="data1">محمد</option>
-                                                                                        <option value="data2">احمد</option>
-                                                                                        <option value="data3">على</option>
-                                                                                    </select>
-
-                                                                                    <i class="mdi mdi-account position-absolute start-0" style="color: #0079ff; font-size: 24px;"></i>
+                                                                                <div class="my-4">
+                                                                                    <label for="emailInput"
+                                                                                        class="form-label">البريد
+                                                                                        الالكترونى</label>
+                                                                                    <input type="email"
+                                                                                        class="form-control"
+                                                                                        id="emailInput">
                                                                                 </div>
-                                                                                
-                                                                                
+
+                                                                                <div class="my-4">
+                                                                                    <label for="phoneInput"
+                                                                                        class="form-label"> رقم
+                                                                                        الجوال</label>
+                                                                                    <input type="tel"
+                                                                                        class="form-control"
+                                                                                        id="phoneInput">
+                                                                                </div>
+
+                                                                                <div class="my-4">
+                                                                                    <label for="addressInput"
+                                                                                        class="form-label"> الموقع
+                                                                                        الحالى</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="addressInput">
+                                                                                </div>
                                                                             </div>
+
+
+
+
+
+
+
                                                                         </div>
 
-                                                                        <div
-                                                                            class="modal-footer d-flex justify-content-center">
+                                                                        <h6 class="px-4"> بيانات الفنى</h6>
+                                                                        <div class="px-4 py-1">
+                                                                            <div>
+                                                                                <div class="my-4">
+                                                                                    <label for="nameInput"
+                                                                                        class="form-label">
+                                                                                        الاسم</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="nameInput">
+                                                                                </div>
 
-                                                                            <button type="button"
-                                                                                class="btn btn-primary waves-effect waves-light">حفظ
-                                                                                التعديلات</button>
+
+
+                                                                                <div class="my-4">
+                                                                                    <label for="phoneInput"
+                                                                                        class="form-label"> رقم
+                                                                                        الجوال</label>
+                                                                                    <input type="tel"
+                                                                                        class="form-control"
+                                                                                        id="phoneInput">
+                                                                                </div>
+
+                                                                                <div class="my-4">
+                                                                                    <label for="addressInput"
+                                                                                        class="form-label"> الموقع
+                                                                                        الحالى</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="addressInput">
+                                                                                </div>
+
+
+
+
+
+
+
+                                                                            </div>
+
+
+
                                                                         </div>
-                                                                    </div><!-- /.modal-content -->
-                                                                </div><!-- /.modal-dialog -->
-                                                            </div>
+                                                                        <h6 class="px-4">  تفاصيل الطلب</h6>
+                                                                        <p class="px-4">وصف المشكلة</p>
+                                                                        <div class="px-4 ">
+                                                                            <div>
+                                                                                <div class="my-4">
+                                                                                   
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="">
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+
+                                                                            <p class="px-4"> الملفات المرفقة</p>
+
+
+                                                                            <h6 class="px-4">جدول الطلب</h6>
+                                                                            <div class="px-4 py-1">
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                                    <div class="w-50">
+                                                                                        <label for="dateInput"
+                                                                                            class="form-label">التاريخ</label>
+                                                                                        <input type="date"
+                                                                                            class="form-control"
+                                                                                            id="dateInput">
+                                                                                    </div>
+
+                                                                                    <div class="w-50">
+                                                                                        <label for="timeInput"
+                                                                                            class="form-label">الوقت</label>
+                                                                                        <input type="time"
+                                                                                            class="form-control"
+                                                                                            id="timeInput">
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <h6 class="px-3 mt-4"> تعيين فنى</h6>
+                                                                                <form
+                                                                                    class="app-search d-none d-lg-block flex-grow-1">
+                                                                                    <div class="position-relative">
+                                                                                        <input type="text"
+                                                                                            class="form-control"
+                                                                                            placeholder="بحث"
+                                                                                            style="background-color: white; border-radius: 5px; border: 1px solid rgb(224, 223, 223);">
+                                                                                        <span
+                                                                                            class="bx bx-search-alt"></span>
+                                                                                    </div>
+                                                                                </form>
+
+                                                                                <!-- Select Dropdown -->
+                                                                                <div class="mt-1">
+
+                                                                                    <div
+                                                                                        class="position-relative d-flex align-items-center">
+                                                                                        <!-- Material Design Icon (Right Side) -->
+
+
+                                                                                        <!-- Select Box (Centered Text & Arrow on Left) -->
+                                                                                        <select
+                                                                                            class="form-select text-center pe-4 ps-5"
+                                                                                            id="dataSelect" dir="rtl">
+                                                                                            <option value="" selected
+                                                                                                disabled>اختيار فنى
+                                                                                            </option>
+                                                                                            <option value="data1">محمد
+                                                                                            </option>
+                                                                                            <option value="data2">احمد
+                                                                                            </option>
+                                                                                            <option value="data3">على
+                                                                                            </option>
+                                                                                        </select>
+
+                                                                                        <i class="mdi mdi-account position-absolute start-0"
+                                                                                            style="color: #0079ff; font-size: 24px;"></i>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="modal-footer d-flex justify-content-center">
+
+                                                                                <button type="button"
+                                                                                    class="btn btn-primary waves-effect waves-light">حفظ
+                                                                                    التعديلات</button>
+                                                                            </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal-dialog -->
+                                                                </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
