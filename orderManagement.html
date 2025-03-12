@@ -221,7 +221,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/handyman-dashboard/liveMap.html"class="waves-effect">
+                            <a href="/handyman-dashboard/liveMap.html" class="waves-effect">
                                 <i class="bx bx-map"></i>
                                 <span key="t-layouts">نظام التتبع المباشر </span>
                             </a>
@@ -278,7 +278,7 @@
                     </ul>
                     <ul class="metismenu list-unstyled mt-6">
                         <li>
-                            <a  href="/handyman-dashboard/login.html" class=" waves-effect">
+                            <a href="/handyman-dashboard/login.html" class=" waves-effect">
                                 <i class="bx bx-log-out fw-bolder"></i>
                                 <span key="t-layouts fw-bolder"> تسجيل الخروج</span>
                             </a>
@@ -471,563 +471,545 @@
 
 
 
-                                    <div class="table-rep-plugin">
-                                        <div class="table-responsive mb-0" data-pattern="priority-columns">
-                                            <table id="tech-companies-1" class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>رقم الطلب</th>
-                                                        <th data-priority="1">اسم العميل</th>
-                                                        <th data-priority="3">عنوان العميل</th>
-                                                        <th data-priority="1">اسم الفنى</th>
-                                                        <th data-priority="3">تاريخ الطلب</th>
-                                                        <th data-priority="3">وقت الطلب</th>
-                                                        <th data-priority="6">الحالة</th>
-                                                        <th data-priority="6">السعر الاجمالى</th>
-                                                        <th data-priority="6">الاجراء</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>001</td>
-                                                        <td>أحمد علي</td>
-                                                        <td>الرياض، المملكة العربية السعودية</td>
-                                                        <td>محمد سعيد</td>
-                                                        <td>01-03-2025</td>
-                                                        <td>10:30 صباحاً</td>
-                                                        <td> مكتمل</td>
-                                                        <td>500 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
+
+                                    <table id="datatable" class="table table-bordered dt-responsive  nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>رقم الطلب</th>
+                                                <th data-priority="1">اسم العميل</th>
+                                                <th data-priority="3">عنوان العميل</th>
+                                                <th data-priority="1">اسم الفنى</th>
+                                                <th data-priority="3">تاريخ الطلب</th>
+                                                <th data-priority="3">وقت الطلب</th>
+                                                <th data-priority="6">الحالة</th>
+                                                <th data-priority="6">السعر الاجمالى</th>
+                                                <th data-priority="6">الاجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>001</td>
+                                                <td>أحمد علي</td>
+                                                <td>الرياض، المملكة العربية السعودية</td>
+                                                <td>محمد سعيد</td>
+                                                <td>01-03-2025</td>
+                                                <td>10:30 صباحاً</td>
+                                                <td> مكتمل</td>
+                                                <td>500 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
 
 
-                                                            <!-- sample modal content -->
-                                                            <div id="myModal" class="modal fade" tabindex="-1"
-                                                                aria-labelledby="myModalLabel" aria-hidden="true">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <button type="button" class="btn-close m-2 p-2"
-                                                                            data-bs-dismiss="modal"
-                                                                            aria-label="Close"></button>
-                                                                        <div class="modal-header ">
-                                                                            <h5 class="modal-title mt-0"
-                                                                                id="myModalLabel">حالة الطلب</h5>
+                                                    <!-- sample modal content -->
+                                                    <div id="myModal" class="modal fade" tabindex="-1"
+                                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <button type="button" class="btn-close m-2 p-2"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                <div class="modal-header ">
+                                                                    <h5 class="modal-title mt-0" id="myModalLabel">حالة
+                                                                        الطلب</h5>
 
-                                                                        </div>
-                                                                        <div
-                                                                            class="modal-body d-flex gap-4 align-items-center">
-                                                                            <div class="form-box form-1 ">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" id="check1">
-                                                                                <button class="btn"
-                                                                                    style="color: #47ad6c;">مكتمل</button>
-
-                                                                            </div>
-                                                                            <div class="form-box form-2 ">
-
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" id="check2">
-                                                                                <button class="btn "
-                                                                                    style="color: #0079ff;"> قيد التنفيذ
-                                                                                </button>
-
-                                                                            </div>
-                                                                            <div class="form-box form-3 ">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" id="check3">
-                                                                                <button class="btn "
-                                                                                    style="color: #fd9422;">نشط
-                                                                                </button>
-
-                                                                            </div>
-                                                                            <div class="form-box form-4 ">
-                                                                                <input class="form-check-input"
-                                                                                    type="checkbox" id="check4">
-                                                                                <button class="btn "
-                                                                                    style="color: #db2626;">ملغى
-                                                                                </button>
-
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <h6 class="px-4"> بيانات العميل</h6>
-                                                                        <div class="px-4 py-1">
-                                                                            <div>
-                                                                                <div class="my-4">
-                                                                                    <label for="nameInput"
-                                                                                        class="form-label">
-                                                                                        الاسم</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control"
-                                                                                        id="nameInput">
-                                                                                </div>
-
-                                                                                <div class="my-4">
-                                                                                    <label for="emailInput"
-                                                                                        class="form-label">البريد
-                                                                                        الالكترونى</label>
-                                                                                    <input type="email"
-                                                                                        class="form-control"
-                                                                                        id="emailInput">
-                                                                                </div>
-
-                                                                                <div class="my-4">
-                                                                                    <label for="phoneInput"
-                                                                                        class="form-label"> رقم
-                                                                                        الجوال</label>
-                                                                                    <input type="tel"
-                                                                                        class="form-control"
-                                                                                        id="phoneInput">
-                                                                                </div>
-
-                                                                                <div class="my-4">
-                                                                                    <label for="addressInput"
-                                                                                        class="form-label"> الموقع
-                                                                                        الحالى</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control"
-                                                                                        id="addressInput">
-                                                                                </div>
-                                                                            </div>
-
-
-
-
-
-
-
-                                                                        </div>
-
-                                                                        <h6 class="px-4"> بيانات الفنى</h6>
-                                                                        <div class="px-4 py-1">
-                                                                            <div>
-                                                                                <div class="my-4">
-                                                                                    <label for="nameInput"
-                                                                                        class="form-label">
-                                                                                        الاسم</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control"
-                                                                                        id="nameInput">
-                                                                                </div>
-
-
-
-                                                                                <div class="my-4">
-                                                                                    <label for="phoneInput"
-                                                                                        class="form-label"> رقم
-                                                                                        الجوال</label>
-                                                                                    <input type="tel"
-                                                                                        class="form-control"
-                                                                                        id="phoneInput">
-                                                                                </div>
-
-                                                                                <div class="my-4">
-                                                                                    <label for="addressInput"
-                                                                                        class="form-label"> الموقع
-                                                                                        الحالى</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control"
-                                                                                        id="addressInput">
-                                                                                </div>
-
-
-
-
-
-
-
-                                                                            </div>
-
-
-
-                                                                        </div>
-                                                                        <h6 class="px-4">  تفاصيل الطلب</h6>
-                                                                        <p class="px-4">وصف المشكلة</p>
-                                                                        <div class="px-4 ">
-                                                                            <div>
-                                                                                <div class="my-4">
-                                                                                   
-                                                                                    <input type="text"
-                                                                                        class="form-control"
-                                                                                        id="">
-                                                                                </div>
-                                                                            </div>
-                                                                            </div>
-
-                                                                            <p class="px-4"> الملفات المرفقة</p>
-
-
-                                                                            <h6 class="px-4">جدول الطلب</h6>
-                                                                            <div class="px-4 py-1">
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center gap-3">
-                                                                                    <div class="w-50">
-                                                                                        <label for="dateInput"
-                                                                                            class="form-label">التاريخ</label>
-                                                                                        <input type="date"
-                                                                                            class="form-control"
-                                                                                            id="dateInput">
-                                                                                    </div>
-
-                                                                                    <div class="w-50">
-                                                                                        <label for="timeInput"
-                                                                                            class="form-label">الوقت</label>
-                                                                                        <input type="time"
-                                                                                            class="form-control"
-                                                                                            id="timeInput">
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <h6 class="px-3 mt-4"> تعيين فنى</h6>
-                                                                                <form
-                                                                                    class="app-search d-none d-lg-block flex-grow-1">
-                                                                                    <div class="position-relative">
-                                                                                        <input type="text"
-                                                                                            class="form-control"
-                                                                                            placeholder="بحث"
-                                                                                            style="background-color: white; border-radius: 5px; border: 1px solid rgb(224, 223, 223);">
-                                                                                        <span
-                                                                                            class="bx bx-search-alt"></span>
-                                                                                    </div>
-                                                                                </form>
-
-                                                                                <!-- Select Dropdown -->
-                                                                                <div class="mt-1">
-
-                                                                                    <div
-                                                                                        class="position-relative d-flex align-items-center">
-                                                                                        <!-- Material Design Icon (Right Side) -->
-
-
-                                                                                        <!-- Select Box (Centered Text & Arrow on Left) -->
-                                                                                        <select
-                                                                                            class="form-select text-center pe-4 ps-5"
-                                                                                            id="dataSelect" dir="rtl">
-                                                                                            <option value="" selected
-                                                                                                disabled>اختيار فنى
-                                                                                            </option>
-                                                                                            <option value="data1">محمد
-                                                                                            </option>
-                                                                                            <option value="data2">احمد
-                                                                                            </option>
-                                                                                            <option value="data3">على
-                                                                                            </option>
-                                                                                        </select>
-
-                                                                                        <i class="mdi mdi-account position-absolute start-0"
-                                                                                            style="color: #0079ff; font-size: 24px;"></i>
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div
-                                                                                class="modal-footer d-flex justify-content-center">
-
-                                                                                <button type="button"
-                                                                                    class="btn btn-primary waves-effect waves-light">حفظ
-                                                                                    التعديلات</button>
-                                                                            </div>
-                                                                        </div><!-- /.modal-content -->
-                                                                    </div><!-- /.modal-dialog -->
                                                                 </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>002</td>
-                                                        <td>فاطمة الزهراء</td>
-                                                        <td>جدة، المملكة العربية السعودية</td>
-                                                        <td>حسن عبدالله</td>
-                                                        <td>28-02-2025</td>
-                                                        <td>02:00 ظهراً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>300 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>003</td>
-                                                        <td>سلمان محمد</td>
-                                                        <td>الدمام، المملكة العربية السعودية</td>
-                                                        <td>علي القحطاني</td>
-                                                        <td>27-02-2025</td>
-                                                        <td>08:45 مساءً</td>
-                                                        <td>غير مكتمل</td>
-                                                        <td>200 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>004</td>
-                                                        <td>مريم خالد</td>
-                                                        <td>الخبر، المملكة العربية السعودية</td>
-                                                        <td>سعيد الفهيد</td>
-                                                        <td>26-02-2025</td>
-                                                        <td>04:20 مساءً</td>
-                                                        <td> نشط</td>
-                                                        <td>150 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>005</td>
-                                                        <td>يوسف جمال</td>
-                                                        <td>مكة المكرمة، المملكة العربية السعودية</td>
-                                                        <td>خالد محمد</td>
-                                                        <td>02-03-2025</td>
-                                                        <td>09:00 صباحاً</td>
-                                                        <td> نشط</td>
-                                                        <td>650 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>006</td>
-                                                        <td>نورة عبد الله</td>
-                                                        <td>الرياض، المملكة العربية السعودية</td>
-                                                        <td>سامي الغامدي</td>
-                                                        <td>02-03-2025</td>
-                                                        <td>11:30 صباحاً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>450 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>007</td>
-                                                        <td>سارة مصطفى</td>
-                                                        <td>الدمام، المملكة العربية السعودية</td>
-                                                        <td>سلمان الحربي</td>
-                                                        <td>01-03-2025</td>
-                                                        <td>01:00 مساءً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>700 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>008</td>
-                                                        <td>خالد السليمان</td>
-                                                        <td>جدة، المملكة العربية السعودية</td>
-                                                        <td>عبد الله الزهراني</td>
-                                                        <td>28-02-2025</td>
-                                                        <td>05:00 مساءً</td>
-                                                        <td> غير مكتمل</td>
-                                                        <td>550 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>009</td>
-                                                        <td>خديجة جمال</td>
-                                                        <td>المدينة المنورة، المملكة العربية السعودية</td>
-                                                        <td>سعد العنزي</td>
-                                                        <td>27-02-2025</td>
-                                                        <td>07:30 مساءً</td>
-                                                        <td> مكتمل</td>
-                                                        <td>400 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>010</td>
-                                                        <td>أحمد علي</td>
-                                                        <td>الرياض، المملكة العربية السعودية</td>
-                                                        <td>محمد سعيد</td>
-                                                        <td>01-03-2025</td>
-                                                        <td>10:30 صباحاً</td>
-                                                        <td> مكتمل</td>
-                                                        <td>500 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>011</td>
-                                                        <td>فاطمة الزهراء</td>
-                                                        <td>جدة، المملكة العربية السعودية</td>
-                                                        <td>حسن عبدالله</td>
-                                                        <td>28-02-2025</td>
-                                                        <td>02:00 ظهراً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>300 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>012</td>
-                                                        <td>سلمان محمد</td>
-                                                        <td>الدمام، المملكة العربية السعودية</td>
-                                                        <td>علي القحطاني</td>
-                                                        <td>27-02-2025</td>
-                                                        <td>08:45 مساءً</td>
-                                                        <td>غير مكتمل</td>
-                                                        <td>200 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>013</td>
-                                                        <td>مريم خالد</td>
-                                                        <td>الخبر، المملكة العربية السعودية</td>
-                                                        <td>سعيد الفهيد</td>
-                                                        <td>26-02-2025</td>
-                                                        <td>04:20 مساءً</td>
-                                                        <td> نشط</td>
-                                                        <td>150 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>014</td>
-                                                        <td>يوسف جمال</td>
-                                                        <td>مكة المكرمة، المملكة العربية السعودية</td>
-                                                        <td>خالد محمد</td>
-                                                        <td>02-03-2025</td>
-                                                        <td>09:00 صباحاً</td>
-                                                        <td> نشط</td>
-                                                        <td>650 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>015</td>
-                                                        <td>نورة عبد الله</td>
-                                                        <td>الرياض، المملكة العربية السعودية</td>
-                                                        <td>سامي الغامدي</td>
-                                                        <td>02-03-2025</td>
-                                                        <td>11:30 صباحاً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>450 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>016</td>
-                                                        <td>سارة مصطفى</td>
-                                                        <td>الدمام، المملكة العربية السعودية</td>
-                                                        <td>سلمان الحربي</td>
-                                                        <td>01-03-2025</td>
-                                                        <td>01:00 مساءً</td>
-                                                        <td>مكتمل</td>
-                                                        <td>700 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>017</td>
-                                                        <td>خالد السليمان</td>
-                                                        <td>جدة، المملكة العربية السعودية</td>
-                                                        <td>عبد الله الزهراني</td>
-                                                        <td>28-02-2025</td>
-                                                        <td>05:00 مساءً</td>
-                                                        <td> غير مكتمل</td>
-                                                        <td>550 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>018</td>
-                                                        <td>خديجة جمال</td>
-                                                        <td>المدينة المنورة، المملكة العربية السعودية</td>
-                                                        <td>سعد العنزي</td>
-                                                        <td>27-02-2025</td>
-                                                        <td>07:30 مساءً</td>
-                                                        <td> مكتمل</td>
-                                                        <td>400 ريال سعودي</td>
-                                                        <td>
-                                                            <button type="button" class="btn  waves-effect waves-light"
-                                                                data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                style="border: none;">
-                                                                <i class="mdi mdi-dots-horizontal"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
+                                                                <div class="modal-body d-flex gap-4 align-items-center">
+                                                                    <div class="form-box form-1 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check1">
+                                                                        <button class="btn"
+                                                                            style="color: #47ad6c;">مكتمل</button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-2 ">
+
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check2">
+                                                                        <button class="btn " style="color: #0079ff;">
+                                                                            قيد التنفيذ
+                                                                        </button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-3 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check3">
+                                                                        <button class="btn " style="color: #fd9422;">نشط
+                                                                        </button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-4 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check4">
+                                                                        <button class="btn "
+                                                                            style="color: #db2626;">ملغى
+                                                                        </button>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <h6 class="px-4"> بيانات العميل</h6>
+                                                                <div class="px-4 py-1">
+                                                                    <div>
+                                                                        <div class="my-4">
+                                                                            <label for="nameInput" class="form-label">
+                                                                                الاسم</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="nameInput">
+                                                                        </div>
+
+                                                                        <div class="my-4">
+                                                                            <label for="emailInput"
+                                                                                class="form-label">البريد
+                                                                                الالكترونى</label>
+                                                                            <input type="email" class="form-control"
+                                                                                id="emailInput">
+                                                                        </div>
+
+                                                                        <div class="my-4">
+                                                                            <label for="phoneInput" class="form-label">
+                                                                                رقم
+                                                                                الجوال</label>
+                                                                            <input type="tel" class="form-control"
+                                                                                id="phoneInput">
+                                                                        </div>
+
+                                                                        <div class="my-4">
+                                                                            <label for="addressInput"
+                                                                                class="form-label"> الموقع
+                                                                                الحالى</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="addressInput">
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+
+
+
+                                                                </div>
+
+                                                                <h6 class="px-4"> بيانات الفنى</h6>
+                                                                <div class="px-4 py-1">
+                                                                    <div>
+                                                                        <div class="my-4">
+                                                                            <label for="nameInput" class="form-label">
+                                                                                الاسم</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="nameInput">
+                                                                        </div>
+
+
+
+                                                                        <div class="my-4">
+                                                                            <label for="phoneInput" class="form-label">
+                                                                                رقم
+                                                                                الجوال</label>
+                                                                            <input type="tel" class="form-control"
+                                                                                id="phoneInput">
+                                                                        </div>
+
+                                                                        <div class="my-4">
+                                                                            <label for="addressInput"
+                                                                                class="form-label"> الموقع
+                                                                                الحالى</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="addressInput">
+                                                                        </div>
+
+
+
+
+
+
+
+                                                                    </div>
+
+
+
+                                                                </div>
+                                                                <h6 class="px-4"> تفاصيل الطلب</h6>
+                                                                <p class="px-4">وصف المشكلة</p>
+                                                                <div class="px-4 ">
+                                                                    <div>
+                                                                        <div class="my-4">
+
+                                                                            <input type="text" class="form-control"
+                                                                                id="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <p class="px-4"> الملفات المرفقة</p>
+
+
+                                                                <h6 class="px-4">جدول الطلب</h6>
+                                                                <div class="px-4 py-1">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center gap-3">
+                                                                        <div class="w-50">
+                                                                            <label for="dateInput"
+                                                                                class="form-label">التاريخ</label>
+                                                                            <input type="date" class="form-control"
+                                                                                id="dateInput">
+                                                                        </div>
+
+                                                                        <div class="w-50">
+                                                                            <label for="timeInput"
+                                                                                class="form-label">الوقت</label>
+                                                                            <input type="time" class="form-control"
+                                                                                id="timeInput">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <h6 class="px-3 mt-4"> تعيين فنى</h6>
+                                                                    <form
+                                                                        class="app-search d-none d-lg-block flex-grow-1">
+                                                                        <div class="position-relative">
+                                                                            <input type="text" class="form-control"
+                                                                                placeholder="بحث"
+                                                                                style="background-color: white; border-radius: 5px; border: 1px solid rgb(224, 223, 223);">
+                                                                            <span class="bx bx-search-alt"></span>
+                                                                        </div>
+                                                                    </form>
+
+                                                                    <!-- Select Dropdown -->
+                                                                    <div class="mt-1">
+
+                                                                        <div
+                                                                            class="position-relative d-flex align-items-center">
+                                                                            <!-- Material Design Icon (Right Side) -->
+
+
+                                                                            <!-- Select Box (Centered Text & Arrow on Left) -->
+                                                                            <select
+                                                                                class="form-select text-center pe-4 ps-5"
+                                                                                id="dataSelect" dir="rtl">
+                                                                                <option value="" selected disabled>
+                                                                                    اختيار فنى
+                                                                                </option>
+                                                                                <option value="data1">محمد
+                                                                                </option>
+                                                                                <option value="data2">احمد
+                                                                                </option>
+                                                                                <option value="data3">على
+                                                                                </option>
+                                                                            </select>
+
+                                                                            <i class="mdi mdi-account position-absolute start-0"
+                                                                                style="color: #0079ff; font-size: 24px;"></i>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="modal-footer d-flex justify-content-center">
+
+                                                                    <button type="button"
+                                                                        class="btn btn-primary waves-effect waves-light">حفظ
+                                                                        التعديلات</button>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>002</td>
+                                                <td>فاطمة الزهراء</td>
+                                                <td>جدة، المملكة العربية السعودية</td>
+                                                <td>حسن عبدالله</td>
+                                                <td>28-02-2025</td>
+                                                <td>02:00 ظهراً</td>
+                                                <td>مكتمل</td>
+                                                <td>300 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>003</td>
+                                                <td>سلمان محمد</td>
+                                                <td>الدمام، المملكة العربية السعودية</td>
+                                                <td>علي القحطاني</td>
+                                                <td>27-02-2025</td>
+                                                <td>08:45 مساءً</td>
+                                                <td>غير مكتمل</td>
+                                                <td>200 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>004</td>
+                                                <td>مريم خالد</td>
+                                                <td>الخبر، المملكة العربية السعودية</td>
+                                                <td>سعيد الفهيد</td>
+                                                <td>26-02-2025</td>
+                                                <td>04:20 مساءً</td>
+                                                <td> نشط</td>
+                                                <td>150 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>005</td>
+                                                <td>يوسف جمال</td>
+                                                <td>مكة المكرمة، المملكة العربية السعودية</td>
+                                                <td>خالد محمد</td>
+                                                <td>02-03-2025</td>
+                                                <td>09:00 صباحاً</td>
+                                                <td> نشط</td>
+                                                <td>650 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>006</td>
+                                                <td>نورة عبد الله</td>
+                                                <td>الرياض، المملكة العربية السعودية</td>
+                                                <td>سامي الغامدي</td>
+                                                <td>02-03-2025</td>
+                                                <td>11:30 صباحاً</td>
+                                                <td>مكتمل</td>
+                                                <td>450 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>007</td>
+                                                <td>سارة مصطفى</td>
+                                                <td>الدمام، المملكة العربية السعودية</td>
+                                                <td>سلمان الحربي</td>
+                                                <td>01-03-2025</td>
+                                                <td>01:00 مساءً</td>
+                                                <td>مكتمل</td>
+                                                <td>700 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>008</td>
+                                                <td>خالد السليمان</td>
+                                                <td>جدة، المملكة العربية السعودية</td>
+                                                <td>عبد الله الزهراني</td>
+                                                <td>28-02-2025</td>
+                                                <td>05:00 مساءً</td>
+                                                <td> غير مكتمل</td>
+                                                <td>550 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>009</td>
+                                                <td>خديجة جمال</td>
+                                                <td>المدينة المنورة، المملكة العربية السعودية</td>
+                                                <td>سعد العنزي</td>
+                                                <td>27-02-2025</td>
+                                                <td>07:30 مساءً</td>
+                                                <td> مكتمل</td>
+                                                <td>400 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>010</td>
+                                                <td>أحمد علي</td>
+                                                <td>الرياض، المملكة العربية السعودية</td>
+                                                <td>محمد سعيد</td>
+                                                <td>01-03-2025</td>
+                                                <td>10:30 صباحاً</td>
+                                                <td> مكتمل</td>
+                                                <td>500 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>011</td>
+                                                <td>فاطمة الزهراء</td>
+                                                <td>جدة، المملكة العربية السعودية</td>
+                                                <td>حسن عبدالله</td>
+                                                <td>28-02-2025</td>
+                                                <td>02:00 ظهراً</td>
+                                                <td>مكتمل</td>
+                                                <td>300 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>012</td>
+                                                <td>سلمان محمد</td>
+                                                <td>الدمام، المملكة العربية السعودية</td>
+                                                <td>علي القحطاني</td>
+                                                <td>27-02-2025</td>
+                                                <td>08:45 مساءً</td>
+                                                <td>غير مكتمل</td>
+                                                <td>200 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>013</td>
+                                                <td>مريم خالد</td>
+                                                <td>الخبر، المملكة العربية السعودية</td>
+                                                <td>سعيد الفهيد</td>
+                                                <td>26-02-2025</td>
+                                                <td>04:20 مساءً</td>
+                                                <td> نشط</td>
+                                                <td>150 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>014</td>
+                                                <td>يوسف جمال</td>
+                                                <td>مكة المكرمة، المملكة العربية السعودية</td>
+                                                <td>خالد محمد</td>
+                                                <td>02-03-2025</td>
+                                                <td>09:00 صباحاً</td>
+                                                <td> نشط</td>
+                                                <td>650 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>015</td>
+                                                <td>نورة عبد الله</td>
+                                                <td>الرياض، المملكة العربية السعودية</td>
+                                                <td>سامي الغامدي</td>
+                                                <td>02-03-2025</td>
+                                                <td>11:30 صباحاً</td>
+                                                <td>مكتمل</td>
+                                                <td>450 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>016</td>
+                                                <td>سارة مصطفى</td>
+                                                <td>الدمام، المملكة العربية السعودية</td>
+                                                <td>سلمان الحربي</td>
+                                                <td>01-03-2025</td>
+                                                <td>01:00 مساءً</td>
+                                                <td>مكتمل</td>
+                                                <td>700 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>017</td>
+                                                <td>خالد السليمان</td>
+                                                <td>جدة، المملكة العربية السعودية</td>
+                                                <td>عبد الله الزهراني</td>
+                                                <td>28-02-2025</td>
+                                                <td>05:00 مساءً</td>
+                                                <td> غير مكتمل</td>
+                                                <td>550 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>018</td>
+                                                <td>خديجة جمال</td>
+                                                <td>المدينة المنورة، المملكة العربية السعودية</td>
+                                                <td>سعد العنزي</td>
+                                                <td>27-02-2025</td>
+                                                <td>07:30 مساءً</td>
+                                                <td> مكتمل</td>
+                                                <td>400 ريال سعودي</td>
+                                                <td>
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
 
 
 
@@ -1036,49 +1018,10 @@
 
 
 
-                                                </tbody>
-                                            </table>
-                                            <div class=" d-flex justify-content-between align-items-center">
-                                                <div class="d-flex gap-2 align-items-center">
-
-                                                    <p class="w-75 mt-2">عدد العرض فى الصفحة</p>
-
-                                                    <select id="rowsPerPage" class="mb-2 w-25"
-                                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);padding: 5px;">
-
-                                                        <option value="10">10</option>
-                                                        <option value="15">15</option>
-                                                        <option value="75">75</option>
-                                                        <option value="100">100</option>
-                                                    </select>
-
-                                                </div>
-                                                <div>
-                                                    <ul class="pagination justify-content-end pagination-rounded">
-                                                        <li class="page-item">
-                                                            <a href="#" class="page-link"><i
-                                                                    class="mdi mdi-chevron-right"></i></a>
-                                                        </li>
-
-                                                        <li class="page-item ">
-                                                            <a href="#" class="page-link">2</a>
-                                                        </li>
-                                                        <li class="page-item ">
-                                                            <a href="#" class="page-link">1</a>
-                                                        </li>
+                                        </tbody>
+                                    </table>
 
 
-
-                                                        <li class="page-item disabled">
-                                                            <a href="#" class="page-link"><i
-                                                                    class="mdi mdi-chevron-left"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
 
                                 </div>
                             </div>
@@ -1109,8 +1052,6 @@
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
 
-    <!-- Responsive Table js -->
-    <!-- <script src="assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
 
     <!-- Init js -->
     <script src="assets/js/pages/table-responsive.init.js"></script>
@@ -1123,6 +1064,16 @@
     <script src="assets/js/pages/sparklines.init.js"></script>
 
     <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+
+    <script src="assets/js/datatable-ar.js"></script>
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>

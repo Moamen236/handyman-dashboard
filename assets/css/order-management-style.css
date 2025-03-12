@@ -50,4 +50,20 @@
     color: #db2626;
 }
 
+.dataTables_length label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
 
+.dataTables_length select {
+    width: 10%;
+}
+
+
+
+.dataTables_paginate {
+    display: flex;
+    justify-content: end;
+}
