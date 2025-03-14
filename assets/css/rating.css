@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body {
+    font-family: "Tajawal", sans-serif;
+}
+
 .rating-statistics .progress {
     height: 18px;
-    background-color: #f0f0f0 !important;
-    border-radius: 4px;
+    background-color: #d9d9d9 !important;
+    border-radius: 10px;
     margin: 0 20px;
     transform: scaleX(-1);
 }
@@ -9,4 +15,9 @@
 .rating-statistics .progress-bar {
     background-color: #FFB800 !important;
     transform: scaleX(-1);
+    border-radius: 10px;
+}
+
+.rating .dropdown .btn{
+    background-color: #f0f7fe !important;
 }

@@ -14,6 +14,24 @@
     <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rating.css">
+    <style>
+        .custom-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            border: 2px solid #007bff;
+            z-index: 10;
+        }
+
+        #technicians-chart {
+            position: relative;
+        }
+    </style>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 </head>
 
 <body>
@@ -297,53 +315,31 @@
         <!-- ============================================================== -->
         <div class="main-content" style="background-color: white;">
 
-            <div class="page-content">
+            <div class="page-content rating">
                 <div class="container-fluid">
                     <div class="row">
                         <!-- Top Rated Technicians -->
                         <div class="col-md-6">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-4">الفنيين المتميزين</h4>
-                                    <div class="chart-container" style="height: 300px;">
-                                        <div class="d-flex justify-content-between align-items-end h-100">
-                                            <div class="text-center">
-                                                <img src="assets/images/users/avatar-1.jpg"
-                                                    class="rounded-circle avatar-sm mb-2">
-                                                <div class="progress progress-vertical" style="height: 100px;">
-                                                    <div class="progress-bar bg-primary" style="height: 40%;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <img src="assets/images/users/avatar-2.jpg"
-                                                    class="rounded-circle avatar-sm mb-2">
-                                                <div class="progress progress-vertical" style="height: 100px;">
-                                                    <div class="progress-bar bg-primary" style="height: 60%;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <img src="assets/images/users/avatar-3.jpg"
-                                                    class="rounded-circle avatar-sm mb-2">
-                                                <div class="progress progress-vertical" style="height: 100px;">
-                                                    <div class="progress-bar bg-primary" style="height: 75%;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <img src="assets/images/users/avatar-4.jpg"
-                                                    class="rounded-circle avatar-sm mb-2">
-                                                <div class="progress progress-vertical" style="height: 100px;">
-                                                    <div class="progress-bar bg-primary" style="height: 85%;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <img src="assets/images/users/avatar-5.jpg"
-                                                    class="rounded-circle avatar-sm mb-2">
-                                                <div class="progress progress-vertical" style="height: 100px;">
-                                                    <div class="progress-bar bg-primary" style="height: 100%;"></div>
-                                                </div>
-                                            </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h4 class="card-title mb-0">الفنيين المتميزين</h4>
+                                        <div class="dropdown">
+                                            <button
+                                                class="btn dropdown-toggle d-flex align-items-center gap-2 text-primary"
+                                                type="button" id="timeFilterDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <span class="text fw-bold">شهري</span>
+                                                <i class="bx bx-chevron-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="timeFilterDropdown">
+                                                <li><a class="dropdown-item" href="#" data-filter="monthly">شهري</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#" data-filter="yearly">سنوي</a></li>
+                                            </ul>
                                         </div>
                                     </div>
+                                    <div id="technicians-chart" style="height: 300px; margin-top: 60px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -352,23 +348,137 @@
                         <div class="col-md-6">
                             <div class="card h-100 rating-statistics">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-4">التقييمات</h4>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h4 class="card-title mb-0">التقييمات</h4>
+                                        <div class="d-flex gap-2">
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle d-flex align-items-center gap-2 text-primary"
+                                                    type="button" id="areaFilterDropdown" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <span class="text fw-bold">المنطقة</span>
+                                                    <i class="bx bx-chevron-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="areaFilterDropdown">
+                                                    <li><a class="dropdown-item" href="#" data-area="all">كل المناطق</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#" data-area="riyadh">الرياض</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#" data-area="jeddah">جدة</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#" data-area="dammam">الدمام</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button
+                                                    class="btn dropdown-toggle d-flex align-items-center gap-2 text-primary"
+                                                    type="button" id="handymanFilterDropdown" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <span class="text fw-bold">الفني</span>
+                                                    <i class="bx bx-chevron-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="handymanFilterDropdown">
+                                                    <li><a class="dropdown-item" href="#" data-handyman="all">كل
+                                                            الفنيين</a></li>
+                                                    <li><a class="dropdown-item" href="#"
+                                                            data-handyman="plumber">السباكة</a></li>
+                                                    <li><a class="dropdown-item" href="#"
+                                                            data-handyman="electrician">الكهرباء</a></li>
+                                                    <li><a class="dropdown-item" href="#"
+                                                            data-handyman="carpenter">النجارة</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="d-flex align-items-center mb-3">
-                                        <div class="ms-2">
-                                            <span class="mdi mdi-account-multiple"></span>
-                                            <span class="fw-bold">100</span>
+                                        <div class="ms-2 d-flex align-items-center">
+                                            <span class="mdi mdi-account-multiple-outline fs-3 text-primary"></span>
+                                            <span class="fw-bold fs-4 me-2">100</span>
                                         </div>
                                         <div class="progress flex-grow-1">
-                                            <div class="progress-bar" style="width: 60%;"></div>
+                                            <div class="progress-bar" style="width: 100%;"></div>
                                         </div>
-                                        <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                                                stroke="gold" stroke-width="1" class="bi bi-star-fill"
+                                                stroke="gold" stroke-width="2" class="bi bi-star-fill"
                                                 viewBox="0 0 16 16">
                                                 <path
                                                     d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                             </svg>
-                                            <span class="me-2">5</span>
+                                            <span class="me-2 fs-4 fw-bold">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="ms-2 d-flex align-items-center">
+                                            <span class="mdi mdi-account-multiple-outline fs-3 text-primary"></span>
+                                            <span class="fw-bold fs-4 me-2">66</span>
+                                        </div>
+                                        <div class="progress flex-grow-1">
+                                            <div class="progress-bar" style="width: 66%;"></div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                stroke="gold" stroke-width="2" class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <span class="me-2 fs-4 fw-bold">4</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="ms-2 d-flex align-items-center">
+                                            <span class="mdi mdi-account-multiple-outline fs-3 text-primary"></span>
+                                            <span class="fw-bold fs-4 me-2">88</span>
+                                        </div>
+                                        <div class="progress flex-grow-1">
+                                            <div class="progress-bar" style="width: 88%;"></div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                stroke="gold" stroke-width="2" class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <span class="me-2 fs-4 fw-bold">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="ms-2 d-flex align-items-center">
+                                            <span class="mdi mdi-account-multiple-outline fs-3 text-primary"></span>
+                                            <span class="fw-bold fs-4 me-2">20</span>
+                                        </div>
+                                        <div class="progress flex-grow-1">
+                                            <div class="progress-bar" style="width: 20%;"></div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                stroke="gold" stroke-width="2" class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <span class="me-2 fs-4 fw-bold">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="ms-2 d-flex align-items-center">
+                                            <span class="mdi mdi-account-multiple-outline fs-3 text-primary"></span>
+                                            <span class="fw-bold fs-4 me-2">10</span>
+                                        </div>
+                                        <div class="progress flex-grow-1">
+                                            <div class="progress-bar" style="width: 10%;"></div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                stroke="gold" stroke-width="2" class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                            <span class="me-2 fs-4 fw-bold">1</span>
                                         </div>
                                     </div>
                                 </div>
@@ -381,20 +491,214 @@
     </div> <!-- container-fluid -->
     <!-- End Page-content -->
 
-
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <script src="assets/js/pages/dashboard.init.js"></script>
-
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Initialize the chart after the DOM is loaded -->
+    <script>
+        window.onload = function () {
+            var options = {
+                chart: {
+                    type: 'bar',
+                    height: 300,
+                    events: {
+                        mounted: function (chartContext, config) {
+                            // Add images after the chart is mounted
+                            const images = [
+                                'assets/images/users/avatar-1.jpg',
+                                'assets/images/users/avatar-2.jpg',
+                                'assets/images/users/avatar-3.jpg',
+                                'assets/images/users/avatar-4.jpg',
+                                'assets/images/users/avatar-5.jpg'
+                            ];
+
+                            const bars = document.querySelectorAll(".apexcharts-bar-area .apexcharts-bar-series .apexcharts-bar");
+
+                            bars.forEach((bar, index) => {
+                                const rect = bar.getBoundingClientRect();
+                                const chartContainer = document.querySelector("#technicians-chart");
+
+                                const img = document.createElement("img");
+                                img.src = images[index];
+                                img.className = "custom-img";
+                                img.style.top = (rect.top - chartContainer.getBoundingClientRect().top - 55) + "px";
+                                img.style.left = (rect.left - chartContainer.getBoundingClientRect().left + rect.width / 2) + "px";
+
+                                chartContainer.appendChild(img);
+                            });
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Performance',
+                    data: [40, 60, 75, 85, 100]
+                }],
+                xaxis: {
+                    categories: ['فني 1', 'فني 2', 'فني 3', 'فني 4', 'فني 5']
+                },
+                colors: ['#007bff'],
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '50%',
+                        endingShape: 'rounded'
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#technicians-chart"), options);
+            chart.render();
+        };
+    </script>
+
+    <!-- Update the JavaScript -->
+    <script>
+        window.onload = function () {
+            var options = {
+                chart: {
+                    type: 'bar',
+                    height: 300,
+                    events: {
+                        mounted: function (chartContext, config) {
+                            setTimeout(() => {
+                                const images = [
+                                    'assets/images/users/avatar-1.jpg',
+                                    'assets/images/users/avatar-2.jpg',
+                                    'assets/images/users/avatar-3.jpg',
+                                    'assets/images/users/avatar-4.jpg',
+                                    'assets/images/users/avatar-5.jpg'
+                                ];
+
+                                const bars = document.querySelectorAll("#technicians-chart .apexcharts-bar-series path");
+                                const chartContainer = document.querySelector("#technicians-chart");
+
+                                // Remove existing images if any
+                                const existingImages = chartContainer.querySelectorAll('.custom-img');
+                                existingImages.forEach(img => img.remove());
+
+                                bars.forEach((bar, index) => {
+                                    const rect = bar.getBoundingClientRect();
+                                    const chartRect = chartContainer.getBoundingClientRect();
+                                    const percentage = config.config.series[0].data[index];
+
+                                    // const verticalOffset = (100 - percentage) * 2;
+                                    console.log(rect.top, chartRect.top, percentage);
+                                    console.log(config);
+
+
+                                    const img = document.createElement("img");
+                                    img.src = images[index];
+                                    img.className = "custom-img";
+                                    // img.style.top = (rect.top - chartRect.top - (percentage > 75 ? percentage * 0.9 : percentage * 0.5)) + "px";
+                                    // img.style.top = (rect.top - chartRect.top - percentage) + "px";
+                                    img.style.top = "0px";
+                                    img.style.left = (rect.left - chartRect.left + (rect.width / 2)) + "px";
+
+                                    chartContainer.appendChild(img);
+                                });
+                            }, 500); // Add delay to ensure chart is fully rendered
+                        }
+                    }
+                },
+                series: [{
+                    name: 'التقييم',
+                    data: [40, 60, 75, 85, 100]
+                }],
+                xaxis: {
+                    categories: ['فني 1', 'فني 2', 'فني 3', 'فني 4', 'فني 5'],
+                    labels: {
+                        style: {
+                            fontSize: '12px'
+                        }
+                    }
+                },
+                colors: ['#556ee6'],
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '45%',
+                        borderRadius: 5,
+                        endingShape: 'rounded'
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    formatter: function (val) {
+                        return val + "%"
+                    },
+                    offsetY: -20,
+                    style: {
+                        fontSize: '12px',
+                        colors: ["#304758"]
+                    }
+                },
+            };
+
+            var chart = new ApexCharts(document.querySelector("#technicians-chart"), options);
+            chart.render();
+
+            function updateImages() {
+                setTimeout(() => {
+                    const images = [
+                        'assets/images/users/avatar-1.jpg',
+                        'assets/images/users/avatar-2.jpg',
+                        'assets/images/users/avatar-3.jpg',
+                        'assets/images/users/avatar-4.jpg',
+                        'assets/images/users/avatar-5.jpg'
+                    ];
+
+                    const bars = document.querySelectorAll("#technicians-chart .apexcharts-bar-series path");
+                    const chartContainer = document.querySelector("#technicians-chart");
+
+                    // Remove existing images
+                    const existingImages = chartContainer.querySelectorAll('.custom-img');
+                    existingImages.forEach(img => img.remove());
+
+                    bars.forEach((bar, index) => {
+                        const rect = bar.getBoundingClientRect();
+                        const chartRect = chartContainer.getBoundingClientRect();
+
+                        const img = document.createElement("img");
+                        img.src = images[index];
+                        img.className = "custom-img";
+                        img.style.top = "0px";
+                        img.style.left = (rect.left - chartRect.left + (rect.width / 2)) + "px";
+
+                        chartContainer.appendChild(img);
+                    });
+                }, 500);
+            }
+
+            // Add event listener for chart update
+            chart.addEventListener('updated', updateImages);
+
+            // Filter click handler
+            document.querySelectorAll('[data-filter]').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const filterType = this.dataset.filter;
+                    document.querySelector('#timeFilterDropdown .text').textContent = filterType === 'monthly' ? 'شهري' : 'سنوي';
+                    const newData = filterType === 'monthly' ?
+                        [40, 60, 75, 85, 100] :
+                        [65, 78, 82, 91, 95];
+
+                    chart.updateSeries([{
+                        name: 'التقييم',
+                        data: newData
+                    }]);
+                });
+            });
+        };
+    </script>
 </body>
 
 </html>
