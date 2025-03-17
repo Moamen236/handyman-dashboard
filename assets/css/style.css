@@ -18,3 +18,24 @@
     border: 1px solid rgb(243, 239, 239) !important;
 }
 
+table tbody tr:nth-child(odd) {
+    background-color: #F0F7FE !important;
+}
+.dataTables_length label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.dataTables_length select {
+    width: 10%;
+}
+
+.dataTables_paginate {
+    display: flex;
+    justify-content: end;
+}
+#datatable_filter label input {
+    display: none !important;
+}
