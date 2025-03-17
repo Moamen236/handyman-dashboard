@@ -303,109 +303,12 @@
                     <div class="card shadow-none">
                         <div class="card-body">
 
+                            <div id="stacked-column-chart" class="apex-charts " dir="rtl"
+                            style="border-bottom: 1px solid rgb(233, 230, 230);"></div>
 
 
-
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="card mini-stats-wid">
-                                                <div class="card-body">
-                                                    <div class="media d-flex gap-4">
-                                                        <div class="d-flex justify-content-center align-items-center"
-                                                            style="border-radius: 50%;height: 30px; width: 30px;background-color: #e8f6ff;">
-                                                            <i class="bx bx-check-circle font-size-18"
-                                                                style="color: #0079ff;"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <p class="text-muted fw-medium">عدد الطلبات المكتمله</p>
-                                                            <h4 class="mb-0">6,585</h4>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-
-                                                        <div id="sparkline10"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="card mini-stats-wid">
-                                                <div class="card-body">
-                                                    <div class="media d-flex gap-4">
-                                                        <div class="d-flex justify-content-center align-items-center"
-                                                            style="border-radius: 50%;height: 30px; width: 30px;background-color: #d3fce2;">
-                                                            <i class="bx bx-globe font-size-18"
-                                                                style="color: #47ad6c;"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <p class="text-muted fw-medium">عدد الطلبات النشطة</p>
-                                                            <h4 class="mb-0">6,585</h4>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="card-body">
-
-                                                        <div id="sparkline2"></div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="card mini-stats-wid">
-                                                <div class="card-body">
-                                                    <div class="media d-flex gap-4">
-                                                        <div class="d-flex justify-content-center align-items-center"
-                                                            style="border-radius: 50%;height: 30px; width: 30px;background-color: #fff4ca;">
-                                                            <i class="bx bx-user font-size-18"
-                                                                style="color: #fd9422;"></i>
-
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <p class="text-muted fw-medium"> عدد الطلبات قيد التنفيذ
-                                                            </p>
-                                                            <h4 class="mb-0">6,585</h4>
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div class="card-body">
-
-                                                        <div id="sparkline11"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="card mini-stats-wid">
-                                                <div class="card-body">
-                                                    <div class="media d-flex gap-4">
-                                                        <div class="d-flex justify-content-center align-items-center"
-                                                            style="border-radius: 50%; height: 30px; width: 30px;background-color: #ffd3d3;">
-                                                            <i class="bx bx-x font-size-18" style="color: #db2626;"></i>
-
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <p class="text-muted fw-medium">عددالطلبات الملغاه</p>
-                                                            <h4 class="mb-0">6,585</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-
-                                                        <div id="sparkline12"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end row -->
+                       
+                          
                         </div>
                     </div>
 
@@ -414,7 +317,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الطلبات</h4>
+                                <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">  إدارة</h4>
                                 <div class="d-flex align-items-center gap-4">
 
                                     <input type="date" id="date-filter" placeholder="التاريخ">
@@ -1064,6 +967,8 @@
     <script src="assets/js/pages/sparklines.init.js"></script>
 
     <script src="assets/js/pages/dashboard.init.js"></script>
+    
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>

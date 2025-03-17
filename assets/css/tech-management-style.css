@@ -65,3 +65,6 @@
     display: flex;
     justify-content: end;
 }
+#datatable_filter label input {
+    display: none !important;
+}

@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $("#datatable").DataTable({
+    let datatable = $("#datatable").DataTable({
         scrollX: true,
         "language": {
             "sEmptyTable": "ليست هناك بيانات متاحة في الجدول",
@@ -27,4 +27,10 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.searchInput').on('keyup', function() {
+        datatable.search(this.value).draw();
+    });
+    
 });
+
