@@ -35,3 +35,19 @@
 .toggle-switch.active::before {
     transform: translateX(30px);
 }
+
+.modalFilter {
+    border-radius: 5px;
+    height: 38px;
+    width: 190px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.contentModal:hover {
+  background-color: #F0F7FE;
+  cursor: pointer;
+}

@@ -129,10 +129,92 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle("active");
         });
     });
+
+    var teamAData = [0, 0, 0, 67, 0, 0, 0]; 
+
+// Generate scatter data: Show only for non-zero values
+var scatterData = teamAData.map(value => value > 0 ? value : null);
+
+var options = {
+    series: [
+        {
+            name: 'تقارير',
+            type: 'column',
+            data: teamAData
+        },
+        {
+            name: 'تقارير',
+            type: 'area',
+            data: [44, 55, 41, 67, 22, 43, 21]
+        },
+        {
+            name: 'تقارير',
+            type: 'scatter',
+            data: scatterData // Only non-zero values will have circles
+        }
+    ],
+    chart: {
+        height: 350,
+        type: 'line',
+        stacked: false,
+        toolbar: {
+            show: false
+        }
+    },
+    colors: ["#356FDB", "#356FDB", "#356FDB"],
+    stroke: {
+        width: [0, 2, 0], 
+        curve: 'smooth'
+    },
+    plotOptions: {
+        bar: {
+            columnWidth: '25%'
+        }
+    },
+    markers: {
+        size: [0, 0, 22], 
+    },
+    fill: {
+        opacity: [0.85, 0.25, 1],
+        gradient: {
+            inverseColors: false,
+            shade: 'light',
+            type: "vertical",
+            opacityFrom: 0.85,
+            opacityTo: 0.55,
+            stops: [0, 100, 100, 100]
+        }
+    },
+    labels: ['الجمعة', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الإثنين', 'الأحد', 'السبت'], 
+    xaxis: {
+        categories: ['الجمعة', 'الخميس', 'الأربعاء', 'الثلاثاء', 'الإثنين', 'الأحد', 'السبت'],
+        reversed: true
+    },
+  
+    tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+            formatter: function (y) {
+                if (typeof y !== "undefined") {
+                    return y.toFixed(0) + " points";
+                }
+                return y;
+            }
+        }
+    },
+    legend: {
+        show: false 
+    },
+   
     
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 
-    
 
+   
 
 
