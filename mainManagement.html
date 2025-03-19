@@ -12,7 +12,7 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/payment-managemt-style.css">
+    <link rel="stylesheet" href="assets/css/main-management-style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -304,14 +304,12 @@
 
                     <div class="card shadow-none">
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mx-4 pb-3"
-                                style="border-bottom: 1px solid rgb(199, 197, 197);">
-                                <h5 class="mb-sm-0" style="font-weight: bold;"> ادارة الرسوم</h5>
+                            <div class="d-flex justify-content-center align-items-center gap-5 mx-4 pb-3">
 
-                                <button type="button" class="btn  waves-effect waves-light" data-bs-toggle="modal"
-                                    data-bs-target="#myModal"
-                                    style="color: white; padding: 10px; border-radius: 10px; background-color: #356FDB; border: none;">
-                                    تعديل رسوم الخدمات
+                                <button type="button" class="btn modalButton waves-effect waves-light"
+                                    data-bs-toggle="modal" data-bs-target="#myModal">
+                                    قائمة الخدمات
+                                    <img class="w-50" src="./assets/images/Group.png" alt="">
                                 </button>
 
 
@@ -438,34 +436,141 @@
 
                                     </div>
                                 </div>
+
+
+                                <button type="button" class="btn modalButton waves-effect waves-light"
+                                    data-bs-toggle="modal" data-bs-target="#myModalFeez">
+
+                                    عمولات الفنيين
+                                    <img class="w-50" src="./assets/images/Objects.png" alt="">
+                                </button>
+
+                                <div id="myModalFeez" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+
+
+                                            <h6 class="px-3"
+                                                style="border-bottom: 1px solid rgb(228, 226, 226); padding-bottom: 20px;">
+                                                سجل الخدمات</h6>
+                                            <div class="px-2 py-1">
+                                                <form class="app-search d-none d-lg-block ">
+                                                    <div class="position-relative">
+                                                        <input type="text" class="form-control searchInput"
+                                                            placeholder="بحث"
+                                                            style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                                        <span class="bx bx-search-alt"></span>
+                                                    </div>
+                                                </form>
+                                                <div class="my-2">
+
+
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th>
+                                                                        رقم الخدمة</th>
+                                                                    <th>
+                                                                        اسدم الخدمة</th>
+
+                                                                    <th>
+                                                                        سعر الخدمة</th>
+                                                                    <th>
+                                                                        الخصم
+                                                                    </th>
+                                                                    <th>
+                                                                        اضافة عرض
+                                                                    </th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1234</td>
+                                                                    <td>صيانة تكيف</td>
+                                                                    <td>100 SAR</td>
+                                                                    <td>20%</td>
+                                                                    <td>
+                                                                        <div class="toggle-container">
+
+                                                                            <div class="toggle-switch"
+                                                                                id="toggleButton"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1235</td>
+                                                                    <td>صيانة تكيف</td>
+                                                                    <td>100 SAR</td>
+                                                                    <td>20%</td>
+                                                                    <td>
+                                                                        <div class="toggle-container">
+
+                                                                            <div class="toggle-switch"
+                                                                                id="toggleButton"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>1236</td>
+                                                                    <td>صيانة تكيف</td>
+                                                                    <td>100 SAR</td>
+                                                                    <td>20%</td>
+                                                                    <td>
+                                                                        <div class="toggle-container">
+
+                                                                            <div class="toggle-switch"
+                                                                                id="toggleButton"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1237</td>
+                                                                    <td>صيانة تكيف</td>
+                                                                    <td>100 SAR</td>
+                                                                    <td>20%</td>
+                                                                    <td>
+                                                                        <div class="toggle-container">
+
+                                                                            <div class="toggle-switch"
+                                                                                id="toggleButton"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-center">
+                                                        <button
+                                                            style="color: white; padding: 7px 10px; border-radius: 10px; background-color: #356FDB; border: none; width: 130px;">حفظ</button>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between" style="margin-left: 60px;">
-                            <h5 class="mb-sm-0" style="font-weight: bold; padding: 0px 40px; "> تقارير
-                                الاريدات</h5>
 
-                            <div class="d-flex gap-4">
-                                <select name="" id=""
-                                    style="height: 32px; padding: 3px; border-radius: 15px; width: 140px; cursor: pointer; border: 1px solid rgb(212, 210, 210); color: gray; font-weight: bold;">
-                                    <option value="selected" hidden> يومى</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                </select>
-                                <select name="" id=""
-                                    style="height: 32px; padding: 3px; border-radius: 15px; width: 140px; cursor: pointer;border: 1px solid rgb(212, 210, 210); color: gray; font-weight: bold;">
-                                    <option value="selected" hidden> اسم العميل</option>
-                                    <option value="">احمد محمد</option>
-                                    <option value="">على طه</option>
-                                </select>
-                            </div>
-
-                        </div>
-
-                        <div id="chart" class="apex-charts " dir="rtl"
-                            style="border-bottom: 1px solid rgb(233, 230, 230);">
-                          
-
-                        </div>
 
 
 
@@ -478,18 +583,17 @@
                 <div class="row mx-1">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;"> ادارة المدفوعات</h4>
+                            <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;"> قائمة المسئولين</h4>
                             <div class="d-flex align-items-center gap-4">
-                                <button type="button" class="btn modalFilter  waves-effect waves-light"
-                                    data-bs-toggle="modal" data-bs-target="#myModalMoney">
+                                <button type="button" class="btn modalButtonSecond  waves-effect waves-light"
+                                    data-bs-toggle="modal" data-bs-target="#myModalEmployee">
                                     <div class="d-flex gap-1">
-                                        <i class="mdi mdi-cash-check" style="font-size: 16px; color: #356FDB;"></i>
-                                        <p>المبلغ</p>
+                                        <p>اضافة مسئول جديد</p>
                                     </div>
                                     <i class="mdi mdi-arrow-down-drop-circle-outline"></i>
                                 </button>
-                                <div id="myModalMoney" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
-                                    aria-hidden="true">
+                                <div id="myModalEmployee" class="modal fade" tabindex="-1"
+                                    aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
@@ -564,154 +668,6 @@
                                     </div>
                                 </div>
 
-                                <button type="button" class="btn modalFilter  waves-effect waves-light"
-                                    data-bs-toggle="modal" data-bs-target="#myModalWay">
-                                    <div class="d-flex gap-1">
-                                        <i class="mdi mdi-credit-card-settings-outline"
-                                            style="font-size: 16px; color: #356FDB;"></i>
-                                        <p> طريقة الدفع</p>
-                                    </div>
-                                    <i class="mdi mdi-arrow-down-drop-circle-outline"></i>
-
-                                </button>
-                                <div id="myModalWay" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-
-
-                                            <h6 class="px-3" style="padding-bottom: 20px;">
-                                                طريقة الدفع</h6>
-                                            <div class="px-2 ">
-
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px; ">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>
-                                                        <span>نقدى</span>
-                                                    </div>
-
-
-
-
-
-
-                                                </div>
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px;">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>
-                                                        <span>بطاقة</span>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px;">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>الكترونى</span>
-                                                    </div>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                                <button type="button" class="btn modalFilter  waves-effect waves-light"
-                                    data-bs-toggle="modal" data-bs-target="#myModalStatus">
-                                    <div class="d-flex gap-1">
-                                        <i class="mdi mdi-list-status" style="font-size: 16px; color: #356FDB;"></i>
-                                        <p> حالة الدفع</p>
-                                    </div>
-                                    <i class="mdi mdi-arrow-down-drop-circle-outline"></i>
-
-                                </button>
-                                <div id="myModalStatus" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-
-
-                                            <h6 class="px-3" style="padding-bottom: 20px;">
-                                                حالة الدفع</h6>
-                                            <div class="px-2 ">
-
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px; ">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>
-                                                        <span>مدفوع</span>
-                                                    </div>
-
-
-
-
-
-
-                                                </div>
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px;">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>
-                                                        <span>معلق</span>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class=" contentModal"
-                                                    style="border-bottom: 1px solid rgb(226, 223, 223); padding: 15px 10px;">
-                                                    <div class="d-flex">
-                                                        <div class="form-check ms-2">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="customer1">
-                                                        </div>الكترونى</span>
-                                                    </div>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
 
 
                             </div>
@@ -750,11 +706,12 @@
                                 <table id="datatable" class="table  dt-responsive  nowrap w-100 ">
                                     <thead>
                                         <tr>
-                                            <th>رقم الطلب</th>
-                                            <th data-priority="1">اسم العميل</th>
-                                            <th data-priority="1"> المبلغ</th>
-                                            <th data-priority="3"> طريقة الدفع</th>
-                                            <th data-priority="6">الحالة</th>
+                                            <th> كود المسئول</th>
+                                            <th data-priority="1">الاسم </th>
+                                            <th data-priority="1"> البريد الالكترونى</th>
+                                            <th data-priority="3"> رقم الهاتف</th>
+                                            <th data-priority="6">الصلاحية</th>
+                                            <th data-priority="6">تفعيل الحساب</th>
                                             <th data-priority="6">الاجراء</th>
                                         </tr>
                                     </thead>
@@ -770,15 +727,17 @@
                                                 </div>
                                             </td>
                                             <td>أحمد علي</td>
-                                            <td> 120 SAR</td>
+                                            <td> user@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
-                                                    <i class="mdi mdi-cash-check"
-                                                        style="font-size: 20px; color: #356FDB;"></i>
-                                                    <p class="mt-1">نقدى</p>
-                                                </div>
+                                                501234567
                                             </td>
-                                            <td> مدفوع</td>
+                                            <td> ادمن</td>
+                                            <td>
+                                                <div class="toggle-container">
+
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
+                                                </div> </td>
 
                                             <td>
 
@@ -801,24 +760,31 @@
                                                     <span>002</span>
                                                 </div>
                                             </td>
-                                            <td>يوسف احمد</td>
-                                            <td> 120 SAR</td>
+                                            <td>محمد علي</td>
+                                            <td> user2@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
-                                                    <i class="mdi mdi-cash-check"
-                                                        style="font-size: 20px; color: #356FDB;"></i>
-                                                    <p class="mt-1">نقدى</p>
-                                                </div>
+                                                601234567
                                             </td>
-                                            <td> مدفوع</td>
+                                            <td> ادمن</td>
+                                            <td>
+                                                <div class="toggle-container">
+
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
+                                                </div> </td>
 
                                             <td>
+
                                                 <button type="button" class="btn  waves-effect waves-light"
                                                     style="border: none;">
                                                     <i class="mdi mdi-dots-horizontal"></i>
                                                 </button>
+
+
+
                                             </td>
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <div class="d-flex">
@@ -829,24 +795,32 @@
                                                     <span>003</span>
                                                 </div>
                                             </td>
-                                            <td>محمد علي</td>
-                                            <td> 120 SAR</td>
+                                            <td>يوسف علي</td>
+                                            <td> user3@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
-                                                    <i class="mdi mdi-cash-check"
-                                                        style="font-size: 20px;  color: #356FDB;"></i>
-                                                    <p class="mt-1">نقدى</p>
+                                                401234567
+                                            </td>
+                                            <td> ادمن</td>
+                                            <td>
+                                                <div class="toggle-container">
+
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
                                                 </div>
                                             </td>
-                                            <td> مدفوع</td>
 
                                             <td>
+
                                                 <button type="button" class="btn  waves-effect waves-light"
                                                     style="border: none;">
                                                     <i class="mdi mdi-dots-horizontal"></i>
                                                 </button>
+
+
+
                                             </td>
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <div class="d-flex">
@@ -858,23 +832,30 @@
                                                 </div>
                                             </td>
                                             <td>أحمد طه</td>
-                                            <td> 120 SAR</td>
+                                            <td> user4@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
-                                                    <i class="mdi mdi-card-bulleted-outline"
-                                                        style="font-size: 20px; color: #356FDB;"></i>
-                                                    <p class="mt-1">بطاقة</p>
-                                                </div>
+                                                501234567
                                             </td>
-                                            <td> مدفوع</td>
+                                            <td> ادمن</td>
+                                            <td>
+                                                <div class="toggle-container">
+
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
+                                                </div> </td>
 
                                             <td>
+
                                                 <button type="button" class="btn  waves-effect waves-light"
                                                     style="border: none;">
                                                     <i class="mdi mdi-dots-horizontal"></i>
                                                 </button>
+
+
+
                                             </td>
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <div class="d-flex">
@@ -885,25 +866,32 @@
                                                     <span>005</span>
                                                 </div>
                                             </td>
-                                            <td>على علي</td>
-                                            <td> 120 SAR</td>
+                                            <td>طه محمد</td>
+                                            <td> user5@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
+                                                501234567
+                                            </td>
+                                            <td> ادمن</td>
+                                            <td> 
+                                                <div class="toggle-container">
 
-                                                    <i class="mdi mdi-cellphone-message"
-                                                        style="font-size: 20px; color: #356FDB;"></i>
-                                                    <p class="mt-1">الكترونى</p>
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
                                                 </div>
                                             </td>
-                                            <td> مدفوع</td>
 
                                             <td>
+
                                                 <button type="button" class="btn  waves-effect waves-light"
                                                     style="border: none;">
                                                     <i class="mdi mdi-dots-horizontal"></i>
                                                 </button>
+
+
+
                                             </td>
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <div class="d-flex">
@@ -914,24 +902,32 @@
                                                     <span>006</span>
                                                 </div>
                                             </td>
-                                            <td>محمد علي</td>
-                                            <td> 120 SAR</td>
+                                            <td>طارق سامح</td>
+                                            <td> user6@gmail.com </td>
                                             <td>
-                                                <div class="d-flex gap-2">
-                                                    <i class="mdi mdi-cash-check"
-                                                        style="font-size: 20px; color: #356FDB;"></i>
-                                                    <p class="mt-1">نقدى</p>
+                                                701234567
+                                            </td>
+                                            <td> ادمن</td>
+                                            <td>
+                                                <div class="toggle-container">
+
+                                                    <div class="toggle-switch"
+                                                        id="toggleButton"></div>
                                                 </div>
                                             </td>
-                                            <td> مدفوع</td>
 
                                             <td>
+
                                                 <button type="button" class="btn  waves-effect waves-light"
                                                     style="border: none;">
                                                     <i class="mdi mdi-dots-horizontal"></i>
                                                 </button>
+
+
+
                                             </td>
                                         </tr>
+
 
 
 
