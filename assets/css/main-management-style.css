@@ -26,6 +26,15 @@
    
 }
 
+.saveButton {
+    border-radius: 5px;
+    height: 38px;
+    width: 150px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+}
+
 .toggle-container {
     display: flex;
     align-items: center;
