@@ -3,7 +3,11 @@
     font-family: "Inter",;
     font-style: normal;
     font-weight: 400;
+   
     /* background: white !important; */
+}
+body {
+    overflow-x: hidden;
 }
 
 .simplebar-content, .simplebar-content-wrapper {
