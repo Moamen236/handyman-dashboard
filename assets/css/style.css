@@ -6,9 +6,6 @@
    
     /* background: white !important; */
 }
-body {
-    overflow-x: hidden;
-}
 
 .simplebar-content, .simplebar-content-wrapper {
     height: 100% !important;

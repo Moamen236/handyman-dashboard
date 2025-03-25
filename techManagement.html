@@ -309,26 +309,33 @@
                                 <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الفنيين</h4>
                                 <div class="d-flex align-items-center gap-4">
 
+                                    <div class="position-relative">
+                                        <i class="mdi mdi-account-question-outline" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select  id="department-filter">
+                                            <option value="selected" hidden>التخصص</option>
+                                            <option value=" سباكة"> سباكة</option>
+                                            <option value=" حدادة"> حدادة</option>
+                                        </select>
+                                    </div>
 
-                                    <select id="department-filter">
-                                        <option value="">التخصص</option>
-                                        <option value=" سباكة"> سباكة</option>
-                                        <option value=" حدادة"> حدادة</option>
-                                    </select>
-
+                                 <div class="position-relative">
+                                    <i class="mdi mdi-list-status" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
                                     <select id="status-tech-filter">
-                                        <option value="">الحالة</option>
+                                        <option value="selected" hidden>الحالة</option>
                                         <option value="مكتمل">مكتمل</option>
                                         <option value="غير مكتمل">غير مكتمل</option>
                                         <option value="نشط">نشط</option>
                                     </select>
+                                 </div>
+                                   <div class="position-relative">
+                                    <i class="mdi mdi-star" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
                                     <select id="rate-filter">
-
-                                        <option value="">التقييم</option>
+                                        <option value="selected" hidden>التقييم</option>
                                         <option value="200">4 أو أقل</option>
                                         <option value="400">6 أو أقل</option>
                                         <option value="600">8 أو أقل</option>
                                     </select>
+                                   </div>
 
                                 </div>
 
@@ -381,7 +388,11 @@
                                                 <td>أحمد علي</td>
                                                 <td>سباكة</td>
                                                 <td>25</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -389,9 +400,10 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
                                                         </div>
 
-                                                        4.8
+                                                        5.0
                                                     </div>
                                                 </td>
 
@@ -540,7 +552,11 @@
 
                                                                                             <td>سباكة</td>
 
-                                                                                            <td>نشط</td>
+                                                                                            <td>
+                                                                                                <p class="activeData">نشط</p>
+                                                                                            
+                                            
+                                                                                            </td>
                                                                                             <td>
                                                                                                 <div class="d-flex">
                                                                                                     <div class="d-flex align-items-center "
@@ -566,7 +582,11 @@
 
                                                                                             <td>سباكة</td>
 
-                                                                                            <td>نشط</td>
+                                                                                            <td>
+                                                                                                <p class="activeData">نشط</p>
+                                                                                            
+                                            
+                                                                                            </td>
                                                                                             <td>
                                                                                                 <div class="d-flex">
                                                                                                     <div class="d-flex align-items-center "
@@ -592,7 +612,11 @@
 
                                                                                             <td>سباكة</td>
 
-                                                                                            <td>نشط</td>
+                                                                                            <td>
+                                                                                                <p class="activeData">نشط</p>
+                                                                                            
+                                            
+                                                                                            </td>
                                                                                             <td>
                                                                                                 <div class="d-flex">
                                                                                                     <div class="d-flex align-items-center "
@@ -618,7 +642,11 @@
 
                                                                                             <td>سباكة</td>
 
-                                                                                            <td>نشط</td>
+                                                                                            <td>
+                                                                                                <p class="activeData">نشط</p>
+                                                                                            
+                                            
+                                                                                            </td>
                                                                                             <td>
                                                                                                 <div class="d-flex">
                                                                                                     <div class="d-flex align-items-center "
@@ -728,7 +756,11 @@
                                                 <td>محمد حسن</td>
                                                 <td>كهرباء</td>
                                                 <td>30</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex ">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -738,7 +770,7 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                         </div>
-                                                        5
+                                                        5.0
 
                                                     </div>
 
@@ -755,7 +787,11 @@
                                                 <td>خالد محمود</td>
                                                 <td>نجارة</td>
                                                 <td>20</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -763,10 +799,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -783,7 +820,9 @@
                                                 <td>سامي يوسف</td>
                                                 <td>تكييف</td>
                                                 <td>15</td>
-                                                <td>غير نشط</td>
+                                                <td> 
+                                                    <p class="notActiveData">غير نشط</p>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -791,10 +830,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -812,10 +852,16 @@
                                                 <td>محمود عمر</td>
                                                 <td>دهانات</td>
                                                 <td>18</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
+                                                            <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
@@ -823,7 +869,7 @@
 
 
                                                         </div>
-                                                        3
+                                                        5.0
 
                                                     </div>
 
@@ -840,7 +886,11 @@
                                                 <td>علي فتحي</td>
                                                 <td>سباكة</td>
                                                 <td>22</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -848,10 +898,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -868,7 +919,11 @@
                                                 <td>ياسر نصر</td>
                                                 <td>كهرباء</td>
                                                 <td>27</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -876,10 +931,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -896,7 +952,9 @@
                                                 <td>زياد سامي</td>
                                                 <td>تكييف</td>
                                                 <td>13</td>
-                                                <td>غير نشط</td>
+                                                <td> 
+                                                    <p class="notActiveData">غير نشط</p>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -904,10 +962,12 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
+
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -924,7 +984,11 @@
                                                 <td>حسين عبد الله</td>
                                                 <td>نجارة</td>
                                                 <td>19</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -932,10 +996,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -952,7 +1017,11 @@
                                                 <td>إيهاب يوسف</td>
                                                 <td>دهانات</td>
                                                 <td>23</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -960,10 +1029,10 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
-
+                                                            <i class="mdi mdi-star"></i>
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -980,7 +1049,11 @@
                                                 <td>كريم محمود</td>
                                                 <td>سباكة</td>
                                                 <td>21</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -988,10 +1061,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -1008,7 +1082,11 @@
                                                 <td>نادر صلاح</td>
                                                 <td>كهرباء</td>
                                                 <td>29</td>
-                                                <td>نشط</td>
+                                                <td>
+                                                    <p class="activeData">نشط</p>
+                                                
+
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -1016,10 +1094,11 @@
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
                                                             <i class="mdi mdi-star"></i>
+                                                            <i class="mdi mdi-star"></i>
 
 
                                                         </div>
-                                                        4
+                                                        5.0
 
                                                     </div>
 
@@ -1036,7 +1115,9 @@
                                                 <td>عمر سعيد</td>
                                                 <td>تكييف</td>
                                                 <td>16</td>
-                                                <td>غير نشط</td>
+                                                <td> 
+                                                    <p class="notActiveData">غير نشط</p>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <div class="d-flex align-items-center " style="color: #FFC31B;">
@@ -1048,7 +1129,7 @@
 
 
                                                         </div>
-                                                        5
+                                                        5.0
 
                                                     </div>
 

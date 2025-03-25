@@ -488,393 +488,395 @@
 
                                     </div>
                                 </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;"> قائمة المسئولين</h4>
+                                <div class="d-flex align-items-center gap-4">
+                                    <button type="button" class="btn modalButtonSecond  waves-effect waves-light"
+                                        data-bs-toggle="modal" data-bs-target="#myModalEmployee">
+                                        <div class="d-flex gap-1">
+                                            <p>اضافة مسئول جديد</p>
+                                        </div>
+                                        <i class="mdi mdi-arrow-down-drop-circle-outline"></i>
+                                    </button>
+                                    <div id="myModalEmployee" class="modal fade" tabindex="-1"
+                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+    
+    
+                                                <h6 class="px-3"
+                                                    style="padding-bottom: 20px; border-bottom: 1px solid rgb(226, 223, 223);">
+                                                    انشاء حساب مسئول جديد</h6>
+                                                <div class=" ">
+    
+                                                    <div class="d-flex justify-content-center gap-3 my-4">
+                                                        <div style="width: 45%;">
+                                                            <label for="name" class="form-label">الاسم </label>
+                                                            <input type="text" class="form-control " id="name"
+                                                                name="name" />
+                                                        </div>
+                                                        <div style="width: 45%;">
+                                                            <label for="username" class="form-label">اسم المستخدم </label>
+                                                            <input type="text" class="form-control" id="username"
+                                                                name="username" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="my-4 px-3">
+                                                        <div>
+                                                            <label for="phone" class="form-label"> رقم الهاتف </label>
+                                                            <input type="tel" class="form-control" id="phone"
+                                                                name="phone" />
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="my-4 px-3">
+                                                        <div>
+                                                            <label for="email" class="form-label"> البريد الالكترونى
+                                                            </label>
+                                                            <input type="email" class="form-control" id="email"
+                                                                name="email" />
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="my-4 px-3">
+                                                        <div>
+                                                            <label for="admin" class="form-label"> الصلاحيات </label>
+                                                            <input type="text" class="form-control" id="admin"
+                                                                name="admin" />
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="my-4 px-3">
+                                                        <div>
+                                                            <label for="password" class="form-label"> كلمة السر </label>
+                                                            <input type="password" class="form-control" id="password"
+                                                                name="password" />
+                                                        </div>
+                                                    </div>
+    
+    
+                                                    <div class=" contentModal" style=" padding: 15px 10px; ">
+                                                        <div class="d-flex">
+                                                            <div class="form-check ms-2">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="customer1">
+                                                            </div>
+                                                            <span>تفعيل المصادقة الثنائية (2FA)</span>
+                                                        </div>
+    
+                                                    </div>
+    
+                                                    <div class="d-flex justify-content-center my-3">
+                                                        <button class="saveButton">حفظ مسئول جديد</button>
+                                                    </div>
+    
+    
+    
+    
+    
+                                                </div>
+    
+    
+    
+                                            </div>
+    
+    
+                                        </div>
+                                    </div>
+    
+    
+    
+                                </div>
+    
+    
+    
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center gap-4 ">
+                                <form class="app-search d-none d-lg-block " style="width: 90%;">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control searchInput" placeholder="بحث"
+                                            style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
+                                        <span class="bx bx-search-alt"></span>
+                                    </div>
+                                </form>
+                                <div style="width: 10%;">
+                                    <button
+                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223); font-size: 15px;padding: 7px;width: 100%;">
+                                        <i class="mdi mdi-download"></i>
+                                        تصدير
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
-                </div>
-
-
-
-                <div class="row mx-1">
-                    <div class="col-12">
-                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;"> قائمة المسئولين</h4>
-                            <div class="d-flex align-items-center gap-4">
-                                <button type="button" class="btn modalButtonSecond  waves-effect waves-light"
-                                    data-bs-toggle="modal" data-bs-target="#myModalEmployee">
-                                    <div class="d-flex gap-1">
-                                        <p>اضافة مسئول جديد</p>
-                                    </div>
-                                    <i class="mdi mdi-arrow-down-drop-circle-outline"></i>
-                                </button>
-                                <div id="myModalEmployee" class="modal fade" tabindex="-1"
-                                    aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <button type="button" class="btn-close m-2 p-2" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-
-
-                                            <h6 class="px-3"
-                                                style="padding-bottom: 20px; border-bottom: 1px solid rgb(226, 223, 223);">
-                                                انشاء حساب مسئول جديد</h6>
-                                            <div class=" ">
-
-                                                <div class="d-flex justify-content-center gap-3 my-4">
-                                                    <div style="width: 45%;">
-                                                        <label for="name" class="form-label">الاسم </label>
-                                                        <input type="text" class="form-control " id="name"
-                                                            name="name" />
-                                                    </div>
-                                                    <div style="width: 45%;">
-                                                        <label for="username" class="form-label">اسم المستخدم </label>
-                                                        <input type="text" class="form-control" id="username"
-                                                            name="username" />
-                                                    </div>
-                                                </div>
-                                                <div class="my-4 px-3">
-                                                    <div>
-                                                        <label for="phone" class="form-label"> رقم الهاتف </label>
-                                                        <input type="tel" class="form-control" id="phone"
-                                                            name="phone" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="my-4 px-3">
-                                                    <div>
-                                                        <label for="email" class="form-label"> البريد الالكترونى
-                                                        </label>
-                                                        <input type="email" class="form-control" id="email"
-                                                            name="email" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="my-4 px-3">
-                                                    <div>
-                                                        <label for="admin" class="form-label"> الصلاحيات </label>
-                                                        <input type="text" class="form-control" id="admin"
-                                                            name="admin" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="my-4 px-3">
-                                                    <div>
-                                                        <label for="password" class="form-label"> كلمة السر </label>
-                                                        <input type="password" class="form-control" id="password"
-                                                            name="password" />
-                                                    </div>
-                                                </div>
-
-
-                                                <div class=" contentModal" style=" padding: 15px 10px; ">
+                    <!-- end page title -->
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card ">
+                                <div class="card-body">
+    
+    
+    
+    
+                                    <table id="datatable" class="table  dt-responsive  nowrap w-100 ">
+                                        <thead>
+                                            <tr>
+                                                <th> كود المسئول</th>
+                                                <th data-priority="1">الاسم </th>
+                                                <th data-priority="1"> البريد الالكترونى</th>
+                                                <th data-priority="3"> رقم الهاتف</th>
+                                                <th data-priority="6">الصلاحية</th>
+                                                <th data-priority="6">تفعيل الحساب</th>
+                                                <th data-priority="6">الاجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
                                                     <div class="d-flex">
                                                         <div class="form-check ms-2">
                                                             <input class="form-check-input" type="checkbox" value=""
                                                                 id="customer1">
                                                         </div>
-                                                        <span>تفعيل المصادقة الثنائية (2FA)</span>
+                                                        <span>001</span>
                                                     </div>
-
-                                                </div>
-
-                                                <div class="d-flex justify-content-center my-3">
-                                                    <button class="saveButton">حفظ مسئول جديد</button>
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                    </div>
+                                                </td>
+                                                <td>أحمد علي</td>
+                                                <td> user@gmail.com </td>
+                                                <td>
+                                                    501234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="form-check ms-2">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="customer1">
+                                                        </div>
+                                                        <span>002</span>
+                                                    </div>
+                                                </td>
+                                                <td>محمد علي</td>
+                                                <td> user2@gmail.com </td>
+                                                <td>
+                                                    601234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="form-check ms-2">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="customer1">
+                                                        </div>
+                                                        <span>003</span>
+                                                    </div>
+                                                </td>
+                                                <td>يوسف علي</td>
+                                                <td> user3@gmail.com </td>
+                                                <td>
+                                                    401234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="form-check ms-2">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="customer1">
+                                                        </div>
+                                                        <span>004</span>
+                                                    </div>
+                                                </td>
+                                                <td>أحمد طه</td>
+                                                <td> user4@gmail.com </td>
+                                                <td>
+                                                    501234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="form-check ms-2">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="customer1">
+                                                        </div>
+                                                        <span>005</span>
+                                                    </div>
+                                                </td>
+                                                <td>طه محمد</td>
+                                                <td> user5@gmail.com </td>
+                                                <td>
+                                                    501234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <div class="form-check ms-2">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="customer1">
+                                                        </div>
+                                                        <span>006</span>
+                                                    </div>
+                                                </td>
+                                                <td>طارق سامح</td>
+                                                <td> user6@gmail.com </td>
+                                                <td>
+                                                    701234567
+                                                </td>
+                                                <td> ادمن</td>
+                                                <td>
+                                                    <div class="toggle-container">
+    
+                                                        <div class="toggle-switch" id="toggleButton"></div>
+                                                    </div>
+                                                </td>
+    
+                                                <td>
+    
+                                                    <button type="button" class="btn  waves-effect waves-light"
+                                                        style="border: none;">
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    </button>
+    
+    
+    
+                                                </td>
+                                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                        </tbody>
+                                    </table>
+    
+    
+    
                                 </div>
-
-
-
                             </div>
-
-
-
+                        </div> 
+                    </div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center gap-4 w-100">
-                            <form class="app-search d-none d-lg-block " style="width: 90%">
-                                <div class="position-relative">
-                                    <input type="text" class="form-control searchInput" placeholder="بحث"
-                                        style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223);">
-                                    <span class="bx bx-search-alt"></span>
-                                </div>
-                            </form>
-                            <div style="width: 10%;">
-                                <button
-                                    style="background-color: white; border-radius: 2px; border: 1px solid rgb(224, 223, 223); font-size: 15px;padding: 7px;width: 100%;">
-                                    <i class="mdi mdi-download"></i>
-                                    تصدير
-                                </button>
-                            </div>
-                        </div>
+
+
+
+
+
                     </div>
                 </div>
-                <!-- end page title -->
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card mx-3">
-                            <div class="card-body">
 
 
 
-
-                                <table id="datatable" class="table  dt-responsive  nowrap w-100 ">
-                                    <thead>
-                                        <tr>
-                                            <th> كود المسئول</th>
-                                            <th data-priority="1">الاسم </th>
-                                            <th data-priority="1"> البريد الالكترونى</th>
-                                            <th data-priority="3"> رقم الهاتف</th>
-                                            <th data-priority="6">الصلاحية</th>
-                                            <th data-priority="6">تفعيل الحساب</th>
-                                            <th data-priority="6">الاجراء</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>001</span>
-                                                </div>
-                                            </td>
-                                            <td>أحمد علي</td>
-                                            <td> user@gmail.com </td>
-                                            <td>
-                                                501234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>002</span>
-                                                </div>
-                                            </td>
-                                            <td>محمد علي</td>
-                                            <td> user2@gmail.com </td>
-                                            <td>
-                                                601234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>003</span>
-                                                </div>
-                                            </td>
-                                            <td>يوسف علي</td>
-                                            <td> user3@gmail.com </td>
-                                            <td>
-                                                401234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>004</span>
-                                                </div>
-                                            </td>
-                                            <td>أحمد طه</td>
-                                            <td> user4@gmail.com </td>
-                                            <td>
-                                                501234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>005</span>
-                                                </div>
-                                            </td>
-                                            <td>طه محمد</td>
-                                            <td> user5@gmail.com </td>
-                                            <td>
-                                                501234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex">
-                                                    <div class="form-check ms-2">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="customer1">
-                                                    </div>
-                                                    <span>006</span>
-                                                </div>
-                                            </td>
-                                            <td>طارق سامح</td>
-                                            <td> user6@gmail.com </td>
-                                            <td>
-                                                701234567
-                                            </td>
-                                            <td> ادمن</td>
-                                            <td>
-                                                <div class="toggle-container">
-
-                                                    <div class="toggle-switch" id="toggleButton"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-
-                                                <button type="button" class="btn  waves-effect waves-light"
-                                                    style="border: none;">
-                                                    <i class="mdi mdi-dots-horizontal"></i>
-                                                </button>
-
-
-
-                                            </td>
-                                        </tr>
-
-
-
-
-
-
-
-
-
-
-                                    </tbody>
-                                </table>
-
-
-
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-                </div> <!-- end row -->
+               
             </div>
         </div>
     </div>

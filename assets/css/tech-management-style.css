@@ -3,10 +3,11 @@
 #status-tech-filter {
     border-radius: 5px;
     height: 32px;
-    width: 120px;
+    width: 150px;
     background-color: #e8f6ff;
     color: #0079ff;
     border: transparent;
+    padding-right: 25px;
    
 }
 
@@ -46,5 +47,26 @@
 
 .toggle-switch.active::before {
     transform: translateX(30px);
+}
+
+.activeData {
+    border-radius: 5px;
+    width: fit-content;
+    
+    padding: 2px;
+    font-size: 12px;
+    background-color: #f2e3b1; 
+    color:  #fd9422;
+    border: transparent;
+}
+.notActiveData {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px;
+    font-size: 12px;
+    
+    background-color: #f8d7da; 
+    color: #db2626;
+    border: transparent;
 }
 
