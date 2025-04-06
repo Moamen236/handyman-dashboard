@@ -19,9 +19,21 @@
     border: 1px solid rgb(243, 239, 239) !important;
 }
 
-table tbody tr:nth-child(odd) {
+/* table tbody tr:nth-child(odd) {
+    background-color: #F0F7FE !important;
+} */
+
+table > tbody > tr:nth-child(odd) {
     background-color: #F0F7FE !important;
 }
+
+
+table thead {
+    background-color: white !important;
+}
+
+
+
 .dataTables_length label {
     display: flex !important;
     align-items: center;
