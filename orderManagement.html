@@ -418,27 +418,38 @@
                                 <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الطلبات</h4>
                                 <div class="d-flex align-items-center gap-4">
 
+                                    
+
                                     <input type="date" id="date-filter" placeholder="التاريخ">
 
+                                    <div class="position-relative">
+                                        <i class="mdi mdi-account-question-outline" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select  id="service-filter">
+                                            <option value="selected" hidden>الخدمة</option>
+                                            <option value=" محمد">  محمد احمد</option>
+                                            <option value=" حسن"> حسن محمد</option>
+                                        </select>
+                                    </div>
 
-                                    <select id="service-filter">
-                                        <option value="">الخدمة</option>
-                                        <option value="محمد سعيد">محمد سعيد</option>
-                                        <option value="حسن عبدالله">حسن عبدالله</option>
-                                    </select>
+                                    <div class="position-relative">
+                                        <i class="mdi mdi-list-status"  style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select  id="status-filter">
+                                            <option value="selected" hidden>الحالة</option>
+                                            <option value=" مكتمل">   مكتمل</option>
+                                            <option value=" غير">  غير مكتمل</option>
+                                            <option value="نشط">نشط</option>
+                                        </select>
+                                    </div>
 
-                                    <select id="status-filter">
-                                        <option value="">الحالة</option>
-                                        <option value="مكتمل">مكتمل</option>
-                                        <option value="غير مكتمل">غير مكتمل</option>
-                                        <option value="نشط">نشط</option>
-                                    </select>
-                                    <select id="price-filter">
-                                        <option value="">السعر</option>
-                                        <option value="200">200 أو أقل</option>
-                                        <option value="400">400 أو أقل</option>
-                                        <option value="600">600 أو أقل</option>
-                                    </select>
+                                    <div class="position-relative">
+                                        <i class="mdi mdi-cash"style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select  id="price-filter">
+                                            <option value="" hidden>السعر</option>
+                                            <option value="200">200 أو أقل</option>
+                                            <option value="400">400 أو أقل</option>
+                                            <option value="600">600 أو أقل</option>
+                                        </select>
+                                    </div>
 
                                 </div>
 
@@ -469,9 +480,6 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-
-
-
 
                                     <table id="datatable" class="table  dt-responsive  nowrap w-100">
                                         <thead>
@@ -506,11 +514,32 @@
                                                 <td> مكتمل</td>
                                                 <td>500 ريال سعودي</td>
                                                 <td>
-                                                    <button type="button" class="btn  waves-effect waves-light"
-                                                        data-bs-toggle="modal" data-bs-target="#myModal"
-                                                        style="border: none;">
-                                                        <i class="mdi mdi-dots-horizontal"></i>
-                                                    </button>
+
+                                                    <div class="dropdown">
+                                                        <button class="btn dropdown-toggle" type="button"
+                                                            id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="bx bx-dots-horizontal-rounded font-size-16"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-start"
+                                                            aria-labelledby="dropdownMenuButton">
+                                                            <li>
+                                                                <a class="dropdown-item text-end" href="#"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#myModal">
+                                                                    <i class="bx bx-show ms-2"></i>عرض
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item text-end" href="#"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#myModalEdit">
+                                                                    <i class="mdi mdi-pencil ms-2"></i>تعديل
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    
 
 
                                                     <!-- sample modal content -->
@@ -657,6 +686,57 @@
                                                                 <p class="px-4"> الملفات المرفقة</p>
 
 
+                                                            
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div>
+
+                                                    <div id="myModalEdit" class="modal fade" tabindex="-1"
+                                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <button type="button" class="btn-close m-2 p-2"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                <div class="modal-header ">
+                                                                    <h5 class="modal-title mt-0" id="myModalLabel">حالة
+                                                                        الطلب</h5>
+
+                                                                </div>
+                                                                <div class="modal-body d-flex gap-4 align-items-center">
+                                                                    <div class="form-box form-1 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check1">
+                                                                        <button class="btn"
+                                                                            style="color: #47ad6c;">مكتمل</button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-2 ">
+
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check2">
+                                                                        <button class="btn " style="color: #0079ff;">
+                                                                            قيد التنفيذ
+                                                                        </button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-3 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check3">
+                                                                        <button class="btn " style="color: #fd9422;">نشط
+                                                                        </button>
+
+                                                                    </div>
+                                                                    <div class="form-box form-4 ">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="check4">
+                                                                        <button class="btn "
+                                                                            style="color: #db2626;">ملغى
+                                                                        </button>
+
+                                                                    </div>
+
+                                                                </div>
+
                                                                 <h6 class="px-4">جدول الطلب</h6>
                                                                 <div class="px-4 py-1">
                                                                     <div
@@ -724,6 +804,20 @@
                                                                         class="btn btn-primary waves-effect waves-light">حفظ
                                                                         التعديلات</button>
                                                                 </div>
+
+                                                                
+
+
+
+
+
+
+
+                                                                </div>
+
+
+
+                                                              
                                                             </div><!-- /.modal-content -->
                                                         </div><!-- /.modal-dialog -->
                                                     </div>

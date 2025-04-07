@@ -1,14 +1,22 @@
 #price-filter,
 #service-filter,
-#status-filter,
-#date-filter{
+#status-filter{
     border-radius: 5px;
     height: 32px;
-    width: 120px;
+    width: 150px;
     background-color: #e8f6ff;
     color: #0079ff;
     border: transparent;
-   
+    padding-right: 25px;
+}
+#date-filter {
+    border-radius: 5px;
+    height: 32px;
+    width: 150px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+    padding: 0 10px;
 }
 
 #dataSelect {
