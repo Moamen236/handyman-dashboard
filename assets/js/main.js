@@ -214,6 +214,41 @@ var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
 
+var options = {
+    series: [30, 50, 40, 20],
+    labels: [" 30% حي الياسمين", " 50% حي التعاون", "40% حي العقيق", " 20% حي حطين"],
+    chart: {
+    width: 320,
+    type: 'donut',
+  },
+  colors: ["#FFF4C5" , '#A3D8FF', "#356FDB" , "#4A8CE7"], 
+
+  dataLabels: {
+    enabled: false
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        show: false
+      }
+    }
+  }],
+  legend: {
+    position: 'bottom',
+    offsetY: 0,
+   
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chartPie"), options);
+  chart.render();
+
+
+
 
 
 
