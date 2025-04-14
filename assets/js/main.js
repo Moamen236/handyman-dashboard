@@ -248,6 +248,99 @@ var options = {
   chart.render();
 
 
+      
+  var options = {
+    series: [67],
+  
+    chart: {
+   width: 320,
+    type: 'radialBar',
+    offsetY: -20
+  },
+  plotOptions: {
+    radialBar: {
+    
+      startAngle: -135,
+      endAngle: 135,
+      dataLabels: {
+        name: {
+          fontSize: '20px',
+          fontWeight: "bold",
+          color: undefined,
+          offsetY: 90
+        },
+        value: {
+            show: false  // <-- Hide the percentage value
+          }
+      }
+    }
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+        shade: 'dark',
+        shadeIntensity: 0.15,
+        inverseColors: false,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 50, 65, 91]
+    },
+  },
+  stroke: {
+    dashArray: 4
+  },
+  labels: ['المتوسط 3:30 دقيقة  '],
+ 
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chartTime"), options);
+  chart.render();
+
+
+  var options = {
+    series: [70, 20, 10],  // Your three numbers
+    chart: {
+      type: 'donut',
+
+       height: 265
+    },
+    colors: ["#356FDB", "#3BCC88", "#ff0000"],
+    plotOptions: {
+      pie: {
+        startAngle: -130,
+        endAngle: 130,
+        donut: {
+          size: '70%',  // Controls the thickness of the "tube"
+          labels: {
+            show: true,
+            total: {
+              show: false,
+           
+            },
+           
+          }
+        }
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+   
+    legend: {
+      position: 'bottom'
+    },
+    labels: ['70% عملاء راضين جدًا', '20% عملاء راضين', '10% عملاء غير راضين']  // Optional labels for slices
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chartRate"), options);
+  chart.render();
+
+
+
+
+
+
+
 
 
 
