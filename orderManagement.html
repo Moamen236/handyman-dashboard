@@ -12,8 +12,8 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/order-management-style.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -27,13 +27,12 @@
                     <div class="navbar-brand-box">
                         <a href="index.html" class="logo d-flex align-items-center justify-content-center gap-4">
 
-                            <span class="logo-lg ">
+                            <span>
                                 <img src="assets/images/brands/Simplification.png" alt="" height="32" class="mb-2">
-
                             </span>
-                            <div>
+                            <span class="logo-lg">
                                 <h3>لوحة التحكم</h3>
-                            </div>
+                            </span>
                         </a>
 
 
@@ -197,68 +196,68 @@
 
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li>
-                            <a href="/index.html" class="waves-effect">
+                            <a href="./index.html" class="waves-effect">
                                 <i class="bx bx-home-circle"></i>
                                 <span key="t-dashboards">الصفحه الرئيسية</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="/orderManagement.html" class="waves-effect">
+                            <a href="./orderManagement.html" class="waves-effect">
                                 <i class="bx bx-file"></i>
                                 <span key="t-layouts">إدارة الطلبات</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/techManagement.html" class="waves-effect">
+                            <a href="./techManagement.html" class="waves-effect">
                                 <i class="bx bx-user"></i>
                                 <span key="t-layouts">إدارة الفنيين</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/customers.html" class="waves-effect">
+                            <a href="./customers.html" class="waves-effect">
                                 <i class="bx bx-group"></i>
                                 <span key="t-layouts">إدارة العملاء </span>
                             </a>
                         </li>
                         <li>
-                            <a href="/liveMap.html" class="waves-effect">
+                            <a href="./liveMap.html" class="waves-effect">
                                 <i class="bx bx-map"></i>
                                 <span key="t-layouts">نظام التتبع المباشر </span>
                             </a>
                         </li>
                         <li>
-                            <a href="/chat.html" class="waves-effect">
+                            <a href="./chat.html" class="waves-effect">
                                 <i class="bx bx-chat"></i>
                                 <span key="t-layouts"> نظام الدردشة الفورية</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/paymentManagment.html" class="waves-effect">
+                            <a href="./paymentManagment.html" class="waves-effect">
                                 <i class="bx bx-wallet"></i>
                                 <span key="t-layouts"> إدارة المدفوعات</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/mainManagement.html" class="waves-effect">
+                            <a href="./mainManagement.html" class="waves-effect">
                                 <i class="bx bx-cog"></i>
                                 <span key="t-layouts"> الإعدادات العامة</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/reports.html" class="waves-effect">
+                            <a href="./reports.html" class="waves-effect">
                                 <i class="bx bx-bar-chart"></i>
                                 <span key="t-layouts"> التقارير والتحليلات</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/smart-review.html" class="waves-effect">
+                            <a href="./smart-review.html" class="waves-effect">
                                 <i class="bx bx-check-shield"></i>
                                 <span key="t-layouts"> نظام المراجعة الذكي</span>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript: void(0);" class="waves-effect">
+                            <a href="./support-center.html" class="waves-effect">
                                 <i class="bx bx-support"></i>
                                 <span key="t-layouts"> مركز الدعم الفني</span>
                             </a>
@@ -279,7 +278,7 @@
                     </ul>
                     <ul class="metismenu list-unstyled mt-6">
                         <li>
-                            <a href="/login.html" class=" waves-effect">
+                            <a href="./login.html" class=" waves-effect">
                                 <i class="bx bx-log-out fw-bolder"></i>
                                 <span key="t-layouts fw-bolder"> تسجيل الخروج</span>
                             </a>
@@ -299,8 +298,6 @@
 
             <div class="page-content">
                 <div class="container-fluid">
-
-
                     <div class="card shadow-none">
                         <div class="card-body">
 
@@ -409,41 +406,41 @@
                             <!-- end row -->
                         </div>
                     </div>
-
-
-
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                 <h4 class="mb-sm-0 font-size-24 " style="font-weight: bold;">قائمة الطلبات</h4>
                                 <div class="d-flex align-items-center gap-4">
 
-                                    
+
 
                                     <input type="date" id="date-filter" placeholder="التاريخ">
 
                                     <div class="position-relative">
-                                        <i class="mdi mdi-account-question-outline" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
-                                        <select  id="service-filter">
+                                        <i class="mdi mdi-account-question-outline"
+                                            style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select id="service-filter">
                                             <option value="selected" hidden>الخدمة</option>
-                                            <option value=" محمد">  محمد احمد</option>
+                                            <option value=" محمد"> محمد احمد</option>
                                             <option value=" حسن"> حسن محمد</option>
                                         </select>
                                     </div>
 
                                     <div class="position-relative">
-                                        <i class="mdi mdi-list-status"  style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
-                                        <select  id="status-filter">
+                                        <i class="mdi mdi-list-status"
+                                            style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select id="status-filter">
                                             <option value="selected" hidden>الحالة</option>
-                                            <option value=" مكتمل">   مكتمل</option>
-                                            <option value=" غير">  غير مكتمل</option>
+                                            <option value=" مكتمل"> مكتمل</option>
+                                            <option value=" غير"> غير مكتمل</option>
                                             <option value="نشط">نشط</option>
                                         </select>
                                     </div>
 
                                     <div class="position-relative">
-                                        <i class="mdi mdi-cash"style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
-                                        <select  id="price-filter">
+                                        <i class="mdi mdi-cash"
+                                            style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); color: #0079ff; font-size: 18px;"></i>
+                                        <select id="price-filter">
                                             <option value="" hidden>السعر</option>
                                             <option value="200">200 أو أقل</option>
                                             <option value="400">400 أو أقل</option>
@@ -475,12 +472,10 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-
                                     <table id="datatable" class="table  dt-responsive  nowrap w-100">
                                         <thead>
                                             <tr>
@@ -514,7 +509,6 @@
                                                 <td> مكتمل</td>
                                                 <td>500 ريال سعودي</td>
                                                 <td>
-
                                                     <div class="dropdown">
                                                         <button class="btn dropdown-toggle" type="button"
                                                             id="dropdownMenuButton" data-bs-toggle="dropdown"
@@ -525,8 +519,7 @@
                                                             aria-labelledby="dropdownMenuButton">
                                                             <li>
                                                                 <a class="dropdown-item text-end" href="#"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#myModal">
+                                                                    data-bs-toggle="modal" data-bs-target="#myModal">
                                                                     <i class="bx bx-show ms-2"></i>عرض
                                                                 </a>
                                                             </li>
@@ -539,9 +532,6 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    
-
-
                                                     <!-- sample modal content -->
                                                     <div id="myModal" class="modal fade" tabindex="-1"
                                                         aria-labelledby="myModalLabel" aria-hidden="true">
@@ -686,7 +676,7 @@
                                                                 <p class="px-4"> الملفات المرفقة</p>
 
 
-                                                            
+
                                                             </div><!-- /.modal-content -->
                                                         </div><!-- /.modal-dialog -->
                                                     </div>
@@ -805,22 +795,9 @@
                                                                         التعديلات</button>
                                                                 </div>
 
-                                                                
-
-
-
-
-
-
-
-                                                                </div>
-
-
-
-                                                              
-                                                            </div><!-- /.modal-content -->
-                                                        </div><!-- /.modal-dialog -->
-                                                    </div>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1248,19 +1225,8 @@
                                                     </button>
                                                 </td>
                                             </tr>
-
-
-
-
-
-
-
-
                                         </tbody>
                                     </table>
-
-
-
                                 </div>
                             </div>
                         </div> <!-- end col -->
@@ -1269,39 +1235,14 @@
             </div>
         </div>
     </div>
-    </div> <!-- container-fluid -->
-    </div>
-    <!-- End Page-content -->
-
-
-
-
-    </div>
-    <!-- end main content-->
-
-
-
-
-    </div>
 
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
-
-
     <!-- Init js -->
     <script src="assets/js/pages/table-responsive.init.js"></script>
-
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <script src="assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
-
-    <script src="assets/js/pages/sparklines.init.js"></script>
-
-    <script src="assets/js/pages/dashboard.init.js"></script>
 
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>

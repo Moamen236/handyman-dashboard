@@ -1,54 +1,8 @@
 /* Common Imports and Base Styles */
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
-*, html, body {
+body {
     font-family: "Tajawal", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-
-/* Layout and Component Styles */
-.simplebar-content, .simplebar-content-wrapper {
-    height: 100% !important;
-}
-
-.metismenu {
-    padding: 0 !important;
-}
-
-.card {
-    border: 1px solid rgb(243, 239, 239) !important;
-    box-shadow: none !important;
-}
-
-/* Table Styles */
-table > tbody > tr:nth-child(odd) {
-    background-color: #F0F7FE !important;
-}
-
-table thead {
-    background-color: white !important;
-}
-
-/* DataTable Styles */
-.dataTables_length label {
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.dataTables_length select {
-    width: 10%;
-}
-
-.dataTables_paginate {
-    display: flex;
-    justify-content: end;
-}
-
-#datatable_filter label input {
-    display: none !important;
 }
 
 /* Chat Styles */
@@ -215,7 +169,7 @@ div#datatable_paginate {
     color: #556ee6;
 }
 
-/* Button Styles */
+/* Main Management Styles */
 .modalButton {
     border-radius: 5px;
     height: 200px;
@@ -248,17 +202,6 @@ div#datatable_paginate {
     background-color: #e8f6ff;
     color: #0079ff;
     border: transparent;
-}
-
-.btn-primary {
-    background-color: #356fdb !important;
-    border-color: #356fdb !important;
-}
-
-.btn-overlay {
-    background-color: #c4def9 !important;
-    color: #356FDB;
-    font-weight: bold;
 }
 
 /* Toggle Switch Styles */
@@ -299,13 +242,10 @@ div#datatable_paginate {
     transform: translateX(30px);
 }
 
-/* Filter Styles */
+/* Order Management Styles */
 #price-filter,
 #service-filter,
-#status-filter,
-#department-filter,
-#rate-filter,
-#status-tech-filter {
+#status-filter {
     border-radius: 5px;
     height: 32px;
     width: 150px;
@@ -333,7 +273,6 @@ div#datatable_paginate {
     border: transparent;
 }
 
-/* Form Box Styles */
 .form-box {
     border-radius: 5px;
     padding-right: 5px;
@@ -383,92 +322,6 @@ div#datatable_paginate {
     background-color: #f0f7fe !important;
 }
 
-/* Status Indicators */
-.activeData {
-    border-radius: 5px;
-    width: fit-content;
-    padding: 2px;
-    font-size: 12px;
-    background-color: #f2e3b1;
-    color: #fd9422;
-    border: transparent;
-}
-
-.notActiveData {
-    border-radius: 5px;
-    width: fit-content;
-    padding: 2px;
-    font-size: 12px;
-    background-color: #f8d7da;
-    color: #db2626;
-    border: transparent;
-}
-
-.doneData {
-    border-radius: 5px;
-    width: fit-content;
-    padding: 2px;
-    font-size: 12px;
-    background-color: #d3fce2;
-    color: #47ad6c;
-    border: transparent;
-}
-
-/* Navigation Styles */
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    background-color: #f0f7fe !important;
-    color: #356fdb !important;
-    font-weight: bold;
-}
-
-.chat-list li.active a {
-    background-color: #f0f7fe !important;
-}
-
-.chat-list li a:hover {
-    background-color: #f0f7fe !important;
-}
-
-/* Modal Styles */
-.modalFilter {
-    border-radius: 5px;
-    height: 38px;
-    width: 190px;
-    background-color: #e8f6ff;
-    color: #0079ff;
-    border: transparent;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contentModal:hover {
-    background-color: #F0F7FE;
-    cursor: pointer;
-}
-
-/* Search Box Styles */
-.search-box.chat-search-box {
-    border: 1px solid #dddddd !important;
-    border-radius: 5px;
-}
-
-.table-search .search-icon {
-    position: absolute;
-    right: 13px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #74788d;
-}
-
-.table-search .form-control {
-    padding-right: 40px;
-    padding-left: 15px;
-    border: 1px solid #e2e5e8;
-    border-radius: 4px;
-    height: 38px;
-}
-
 /* Support Center Styles */
 .badge.success {
     background-color: #d9edef !important;
@@ -481,6 +334,18 @@ div#datatable_paginate {
 }
 
 /* Tech Management Styles */
+#department-filter,
+#rate-filter,
+#status-tech-filter {
+    border-radius: 5px;
+    height: 32px;
+    width: 150px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+    padding-right: 25px;
+}
+
 .toggle-container-tech {
     display: flex;
     align-items: center;
@@ -518,38 +383,126 @@ div#datatable_paginate {
     transform: translateX(30px);
 }
 
-/* Support Center Styles */
-.response-time-icon {
-    font-size: 19.5rem;
+/* Status Indicators */
+.activeData {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #f2e3b1;
+    color: #fd9422;
+    border: transparent;
 }
 
-/* Responsive font sizes for the response time icon */
-@media (max-width: 1400px) {
-    .response-time-icon {
-        font-size: 16rem;
-    }
+.notActiveData {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #f8d7da;
+    color: #db2626;
+    border: transparent;
 }
 
-@media (max-width: 1200px) {
-    .response-time-icon {
-        font-size: 14rem;
-    }
+.doneData {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #d3fce2;
+    color: #47ad6c;
+    border: transparent;
 }
 
-@media (max-width: 992px) {
-    .response-time-icon {
-        font-size: 12rem;
-    }
+/* Common Button Styles */
+.btn-primary {
+    background-color: #356fdb !important;
+    border-color: #356fdb !important;
 }
 
-@media (max-width: 768px) {
-    .response-time-icon {
-        font-size: 10rem;
-    }
+.btn-overlay {
+    background-color: #c4def9 !important;
+    color: #356FDB;
+    font-weight: bold;
 }
 
-@media (max-width: 576px) {
-    .response-time-icon {
-        font-size: 8rem;
-    }
+/* Card Styles */
+.card {
+    box-shadow: none !important;
+}
+
+/* Navigation Styles */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #f0f7fe !important;
+    color: #356fdb !important;
+    font-weight: bold;
+}
+
+.chat-list li.active a {
+    background-color: #f0f7fe !important;
+}
+
+.chat-list li a:hover {
+    background-color: #f0f7fe !important;
+}
+
+/* Modal Styles */
+.modalFilter {
+    border-radius: 5px;
+    height: 38px;
+    width: 190px;
+    background-color: #e8f6ff;
+    color: #0079ff;
+    border: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentModal:hover {
+    background-color: #F0F7FE;
+    cursor: pointer;
+}
+
+/* DataTable Styles */
+.dataTables_length label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.dataTables_length select {
+    width: 10%;
+}
+
+.dataTables_paginate {
+    display: flex;
+    justify-content: end;
+}
+
+#datatable_filter label input {
+    display: none !important;
+}
+
+/* Search Box Styles */
+.search-box.chat-search-box {
+    border: 1px solid #dddddd !important;
+    border-radius: 5px;
+}
+
+.table-search .search-icon {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #74788d;
+}
+
+.table-search .form-control {
+    padding-right: 40px;
+    padding-left: 15px;
+    border: 1px solid #e2e5e8;
+    border-radius: 4px;
+    height: 38px;
 }
